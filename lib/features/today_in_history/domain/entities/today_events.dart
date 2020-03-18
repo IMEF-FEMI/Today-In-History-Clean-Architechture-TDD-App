@@ -9,11 +9,12 @@ class TodayEvents {
 class Event {
   final String year;
   final String text;
-  final String url;
+  final String link;
+  
 
   Event({
     this.year,
     this.text,
-    this.url,
+    this.link,
   });
 }
