@@ -89,6 +89,83 @@ void main() {
       );
 
       });
+      runTestOnline(() {
+        test(
+            'should return remote data when the call to remote data source is successful',
+            () async {
+          // arrange
+          when(mockRemoteDataSource.getEventsForDate(tMonth, tDay))
+              .thenAnswer((_) async => tTodayEventsModel);
+          // act
+          final result = await repository.getEventsForDate(tMonth, tDay);
+
+          // assert
+
+          verify(mockRemoteDataSource.getEventsForDate(tMonth, tDay));
+          expect(result, equals(Right(tTodayEvents)));
+        });
+
+        test(
+            'should cache the data locally when the call to remote data source is successful',
+            () async {
+          // arrange
+          when(mockRemoteDataSource.getEventsForDate(tMonth, tDay))
+              .thenAnswer((_) async => tTodayEventsModel);
+          // act
+          await repository.getEventsForDate(tMonth, tDay);
+
+          // assert
+          verify(mockRemoteDataSource.getEventsForDate(tMonth, tDay));
+          verify(mockLocalDataSource.cacheTIHEvents(tTodayEvents));
+        });
+
+        test(
+            'should return server failure when the call to remote data source is unsuccessful',
+            () async {
+          // arrange
+          when(mockRemoteDataSource.getEventsForDate(any, any))
+              .thenThrow(ServerException());
+          // act
+
+          final result = await repository.getEventsForDate(tMonth, tDay);
+
+          // assert
+          verify(mockRemoteDataSource.getEventsForDate(tMonth, tDay));
+          verifyZeroInteractions(mockLocalDataSource);
+          expect(result, equals(Left(ServerFailure())));
+        });
+      });
+
+      runTestOffline(() {
+        test(
+            'should return last locally chached data, when the cached data is present',
+            () async {
+          // arrange
+          when(mockLocalDataSource.getLastTIHEvent())
+              .thenAnswer((_) async => tTodayEventsModel);
+          // act
+          final result = await repository.getEventsForDate(tMonth, tDay);
+          // assert
+          verifyZeroInteractions(mockRemoteDataSource);
+          verify(mockLocalDataSource.getLastTIHEvent());
+          expect(result, equals(Right(tTodayEvents)));
+        });
+      });
+
+      test('should return ChacheFailure when there is no chached data present',
+          () async {
+        // arrange
+        when(mockLocalDataSource.getLastTIHEvent()).thenThrow(CacheException());
+
+        // act
+        final result = await repository.getEventsForDate(tMonth, tDay);
+
+        // assert
+        verifyZeroInteractions(mockRemoteDataSource);
+        verify(mockLocalDataSource.getLastTIHEvent());
+        expect(result, equals(Left(CacheFailure())));
+      });
+    
   });
 
   group('get event for today', () {
