@@ -1,4 +1,6 @@
-class TodayEvents extends  {
+import 'package:equatable/equatable.dart';
+
+class TodayEvents extends Equatable {
   final String date;
   final String url;
   final List events;
