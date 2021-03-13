@@ -39,7 +39,7 @@ class TodayInHistoryRepositoryImpl implements TodayInHistoryRepository {
     if (await networkInfo.isConnected) {
       try {
         final remoteEvent = await todayOrSpecificDay();
-        localDataSource
+        localDataSource.cacheTIHEvents(remoteEvent)
         return Right(remoteEvent);
       } on ServerException {
         return Left(ServerFailure());
