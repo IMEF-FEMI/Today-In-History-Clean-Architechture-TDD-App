@@ -12,7 +12,7 @@ import 'package:today_in_history/features/today_in_history/domain/repositories/t
 
 class MockRemoteDataSource extends Mock implements TIHRemoteDataSource {}
 
-class MockLocalDataSource extends Mock implements TIHLocalDataSource {}
+class MockLocalDataSource extends Mock implements TIHLocalDataSourceImpl {}
 
 class MockNetworkInfo extends Mock implements NetworkInfo {}
 
