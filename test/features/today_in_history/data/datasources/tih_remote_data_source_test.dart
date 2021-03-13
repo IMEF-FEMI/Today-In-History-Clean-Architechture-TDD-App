@@ -6,7 +6,7 @@ import 'package:today_in_history/core/error/exceptions.dart';
 import 'package:today_in_history/features/today_in_history/data/datasources/tih_remote_data_source.dart';
 import 'package:http/http.dart' as http;
 import 'package:today_in_history/features/today_in_history/data/models/today_events_model.dart';
-import 'dartz.dart';
+import 'package:dartz/dartz.dart';
 import '../../../../fixtures/fixture_reader.dart';
 
 class MockHttpClient extends Mock implements http.Client {}
