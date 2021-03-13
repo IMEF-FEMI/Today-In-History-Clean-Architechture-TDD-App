@@ -19,7 +19,7 @@ void main() {
         TIHLocalDataSourceImpl(sharedPreferences: mockSharedPreferences);
   });
 
-  group("get last chached event", () {
+  group("get last cached event", () {
     final tEventsModel = TodayEventsModel.fromLocalJson(
         json.decode(fixture('event_cached.json')));
 
