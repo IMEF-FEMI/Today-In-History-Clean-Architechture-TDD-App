@@ -198,6 +198,8 @@ void main() {
         verify(await mockNetworkInfo.isConnected);
       });
 
+    });
+
       runTestOnline(() {
         test(
             'should return remote data when the call to remote data source is successful',
@@ -273,6 +275,5 @@ void main() {
         verify(mockLocalDataSource.getLastTIHEvent());
         expect(result, equals(Left(CacheFailure())));
       });
-    });
   });
 }
