@@ -1,0 +1,49 @@
+{
+  "date": "February 14",
+  "url": "https://wikipedia.org/wiki/February_14",
+  "data": {
+    "Events": [
+      {
+        "year": "748",
+        "text": "Abbasid Revolution: The Hashimi rebels under Abu Muslim Khorasani take Merv, capital of the Umayyad province Khorasan, marking the consolidation of the Abbasid revolt.",
+        "html": "748 - <a href=\"https://wikipedia.org/wiki/Abbasid_Revolution#Khorosan_phase\" title=\"Abbasid Revolution\">Abbasid Revolution</a>: The <a href=\"https://wikipedia.org/wiki/Kaysanites_Shia#History\" class=\"mw-redirect\" title=\"Kaysanites Shia\">Hashimi</a> rebels under <a href=\"https://wikipedia.org/wiki/Abu_Muslim_Khorasani\" class=\"mw-redirect\" title=\"Abu Muslim Khorasani\">Abu Muslim Khorasani</a> take <a href=\"https://wikipedia.org/wiki/Merv\" title=\"Merv\">Merv</a>, capital of the <a href=\"https://wikipedia.org/wiki/Umayyad_Caliphate\" title=\"Umayyad Caliphate\">Umayyad</a> province <a href=\"https://wikipedia.org/wiki/Greater_Khorasan\" title=\"Greater Khorasan\">Khorasan</a>, marking the consolidation of the <a href=\"https://wikipedia.org/wiki/Abbasid_Caliphate\" title=\"Abbasid Caliphate\">Abbasid</a> revolt.",
+        "no_year_html": "<a href=\"https://wikipedia.org/wiki/Abbasid_Revolution#Khorosan_phase\" title=\"Abbasid Revolution\">Abbasid Revolution</a>: The <a href=\"https://wikipedia.org/wiki/Kaysanites_Shia#History\" class=\"mw-redirect\" title=\"Kaysanites Shia\">Hashimi</a> rebels under <a href=\"https://wikipedia.org/wiki/Abu_Muslim_Khorasani\" class=\"mw-redirect\" title=\"Abu Muslim Khorasani\">Abu Muslim Khorasani</a> take <a href=\"https://wikipedia.org/wiki/Merv\" title=\"Merv\">Merv</a>, capital of the <a href=\"https://wikipedia.org/wiki/Umayyad_Caliphate\" title=\"Umayyad Caliphate\">Umayyad</a> province <a href=\"https://wikipedia.org/wiki/Greater_Khorasan\" title=\"Greater Khorasan\">Khorasan</a>, marking the consolidation of the <a href=\"https://wikipedia.org/wiki/Abbasid_Caliphate\" title=\"Abbasid Caliphate\">Abbasid</a> revolt.",
+        "links": [
+          {
+            "title": "Abbasid Revolution",
+            "link": "https://wikipedia.org/wiki/Abbasid_Revolution#Khorosan_phase"
+          },
+          {
+            "title": "Kaysanites Shia",
+            "link": "https://wikipedia.org/wiki/Kaysanites_Shia#History"
+          },
+          {
+            "title": "Abu Muslim Khorasani",
+            "link": "https://wikipedia.org/wiki/Abu_Muslim_Khorasani"
+          }
+         
+        ]
+      },
+      {
+        "year": "842",
+        "text": "Charles the Bald and Louis the German swear the Oaths of Strasbourg in the French and German languages.",
+        "html": "842 - <a href=\"https://wikipedia.org/wiki/Charles_the_Bald\" title=\"Charles the Bald\">Charles the Bald</a> and <a href=\"https://wikipedia.org/wiki/Louis_the_German\" title=\"Louis the German\">Louis the German</a> swear the <a href=\"https://wikipedia.org/wiki/Oaths_of_Strasbourg\" title=\"Oaths of Strasbourg\">Oaths of Strasbourg</a> in the French and German languages.",
+        "no_year_html": "<a href=\"https://wikipedia.org/wiki/Charles_the_Bald\" title=\"Charles the Bald\">Charles the Bald</a> and <a href=\"https://wikipedia.org/wiki/Louis_the_German\" title=\"Louis the German\">Louis the German</a> swear the <a href=\"https://wikipedia.org/wiki/Oaths_of_Strasbourg\" title=\"Oaths of Strasbourg\">Oaths of Strasbourg</a> in the French and German languages.",
+        "links": [
+          {
+            "title": "Charles the Bald",
+            "link": "https://wikipedia.org/wiki/Charles_the_Bald"
+          },
+          {
+            "title": "Louis the German",
+            "link": "https://wikipedia.org/wiki/Louis_the_German"
+          },
+          {
+            "title": "Oaths of Strasbourg",
+            "link": "https://wikipedia.org/wiki/Oaths_of_Strasbourg"
+          }
+        ]
+      }
+    ]
+  }
+}

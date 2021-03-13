@@ -7,14 +7,33 @@ class TodayEvents {
 }
 
 class Event {
-  final String year;
-  final String text;
-  final String link;
-  
+  String year;
+  String text;
+  String link;
 
   Event({
     this.year,
     this.text,
     this.link,
   });
+
+  Event.fromJson(Map json) {
+    year = json['year'];
+    text = json['text'];
+    link = json['links'][0]['link'];
+  }
+
+  Event.fromLocalJson(Map json) {
+    year = json['year'];
+    text = json['text'];
+    link = json['link'];
+  }
+
+  Map toJson() {
+    return {
+      'year': year,
+      'text': text,
+      'link': link,
+    };
+  }
 }
