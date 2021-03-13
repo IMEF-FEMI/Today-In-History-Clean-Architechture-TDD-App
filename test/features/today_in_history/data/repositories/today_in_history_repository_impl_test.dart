@@ -74,7 +74,6 @@ void main() {
     );
     final TodayEvents tTodayEvents = tTodayEventsModel;
 
-    test('should check if device is online', () async {
 
       test(
         'should check if the device is online',
@@ -88,7 +87,6 @@ void main() {
         },
       );
 
-      });
       runTestOnline(() {
         test(
             'should return remote data when the call to remote data source is successful',
