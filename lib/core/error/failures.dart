@@ -2,10 +2,7 @@ abstract class Failure{}
 
 class ServerFailure extends Failure {
   @override
-    String toString() {
-      // TODO: implement toString
-      return super.toString();
-    }
+    String toString()=>"Server Fail"
 }
 
 class CacheFailure extends Failure {}
