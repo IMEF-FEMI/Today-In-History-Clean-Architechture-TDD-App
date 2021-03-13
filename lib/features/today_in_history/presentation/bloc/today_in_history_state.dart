@@ -7,7 +7,8 @@ abstract class TodayInHistoryState extends Equatable{
 }
 
 class Empty extends TodayInHistoryState {
-  
+   @override
+  List<Object> get props => ["Empty"];
 }
 
 class Loading extends TodayInHistoryState {}
