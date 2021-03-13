@@ -34,19 +34,23 @@ void main() {
   });
 
   void runTestOnline(Function body) {
+    group('device is online', () {
       setUp(() {
         when(mockNetworkInfo.isConnected).thenAnswer((_) async => true);
       });
 
       body();
+    });
   }
 
   void runTestOffline(Function body) {
+    group('device is offline', () {
       setUp(() {
         when(mockNetworkInfo.isConnected).thenAnswer((_) async => false);
       });
 
       body();
+    });
   }
 
   group('get event for specific days', () {
@@ -147,20 +151,7 @@ void main() {
           expect(result, equals(Right(tTodayEvents)));
         });
 
-         test('should return ChacheFailure when there is no chached data present',
-          () async {
-        // arrange
-        when(mockLocalDataSource.getLastTIHEvent()).thenThrow(CacheException());
-
-        // act
-        final result = await repository.getEventsForDate(tMonth, tDay);
-
-        // assert
-        verifyZeroInteractions(mockRemoteDataSource);
-        verify(mockLocalDataSource.getLastTIHEvent());
-        expect(result, equals(Left(CacheFailure())));
-      });
-    
+        
       });
 
      
