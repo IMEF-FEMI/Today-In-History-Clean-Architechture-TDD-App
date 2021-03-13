@@ -30,8 +30,6 @@ void main() {
         .thenAnswer((_) async => http.Response('something went wrong', 404));
   }
 
-
-
   group('get Today in history for specific date', () {
     final tDay = 14;
     final tMonth = 2;
@@ -48,7 +46,7 @@ void main() {
 
       verify(
         mockHttpClient.get(
-         Uri.parse( 'http://history.muffinlabs.com/date/$tMonth/$tDay'),
+          Uri.parse('http://history.muffinlabs.com/date/$tMonth/$tDay'),
           headers: {'Content-Type': 'application/json'},
         ),
       );
@@ -72,15 +70,13 @@ void main() {
         final call = dataSource.getEventsForDate;
 
         // assert
-        expect(()=>call(tMonth, tDay),throwsA(Matcher.TypeMatcher<ServerException>()) );
+        expect(() => call(tMonth, tDay),
+            throwsA(Matcher.TypeMatcher<ServerException>()));
       });
     });
   });
 
-
-
   group('get Today in history for today', () {
-  
     final tTodayEventsModel =
         TodayEventsModel.fromJson(json.decode(fixture("event.json")));
     test('''Should perform a GET request on a URL with month/day being
@@ -94,7 +90,7 @@ void main() {
 
       verify(
         mockHttpClient.get(
-         Uri.parse( 'http://history.muffinlabs.com/date'),
+          Uri.parse('http://history.muffinlabs.com/date'),
           headers: {'Content-Type': 'application/json'},
         ),
       );
@@ -118,9 +114,8 @@ void main() {
         final call = dataSource.getEventsForToday;
 
         // assert
-        expect(()=>call(),throwsA(Matcher.TypeMatcher<ServerException>()) )
+        expect(() => call(), throwsA(Matcher.TypeMatcher<ServerException>()));
       });
     });
   });
-
 }
