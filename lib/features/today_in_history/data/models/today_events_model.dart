@@ -25,7 +25,7 @@ class TodayEventsModel extends TodayEvents {
     return TodayEventsModel(
       date: json['date'],
       url: json['url'],
-      events: json['events']
+      events:( json['events']as List)
           .map((event) => Event.fromLocalJson(json))
           .toList<Event>(),
     );
