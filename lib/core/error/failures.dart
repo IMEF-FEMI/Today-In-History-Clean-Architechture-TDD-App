@@ -1,11 +1,5 @@
-abstract class Failure {}
+abstract class Failure{}
 
-class ServerFailure extends Failure {
-  @override
-  String toString() => "Server Failure";
-}
+class ServerFailure extends Failure {}
 
-class CacheFailure extends Failure {
-    @override
-  String toString() => "Cache Failure";
-}
+class CacheFailure extends Failure {}
