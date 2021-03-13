@@ -103,7 +103,7 @@ void main() {
         // arrange
         setUpMockHttpClientSuccess200();
         // act
-        final tTodayEventsModel result = dataSource.getEventsForToday();
+        final TodayEventsModel result = dataSource.getEventsForToday();
 
         // assert
         expect(result, equals(tTodayEventsModel));
