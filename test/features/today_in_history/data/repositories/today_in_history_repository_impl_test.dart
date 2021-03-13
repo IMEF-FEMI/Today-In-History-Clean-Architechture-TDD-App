@@ -79,7 +79,7 @@ void main() {
       test('should check if device is online', () async {
         await repository.getEventsForDate(tMonth, tDay);
         //  verify that isConnected is actually called
-        verify( mockNetworkInfo.isConnected);
+        verify(await mockNetworkInfo.isConnected);
       });
     });
 
