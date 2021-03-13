@@ -1,0 +1,18 @@
+-------------------- Auto-Git Log --------------------
+		Sat Mar 13 2021 03:16:06 GMT+0100 (West Africa Standard Time)
+------------------------------------------------------
+
+Modified files:
+* pubspec.lock
+* pubspec.yaml
+* test/core/network/network_info_test.dart
+
+
+Created files:
+* .autogit/logs/log-13-2-2021-3-15-21.txt
+
+
+Deleted files:
+
+
+Renamed files:
