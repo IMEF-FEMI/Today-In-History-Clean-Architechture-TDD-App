@@ -94,7 +94,7 @@ void main() {
 
       verify(
         mockHttpClient.get(
-         Ur.parse( 'http://history.muffinlabs.com/date'),
+         Uri.parse( 'http://history.muffinlabs.com/date'),
           headers: {'Content-Type': 'application/json'},
         ),
       );
