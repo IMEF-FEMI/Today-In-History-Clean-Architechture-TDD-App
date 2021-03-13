@@ -20,6 +20,9 @@ class Loaded extends TodayInHistoryState {
   final TodayEventsModel eventsModel;
 
   Loaded({@required this.eventsModel});
+      @override
+  List<Object> get props => [LOA];
+  
 }
 
 class Error extends TodayInHistoryState {
