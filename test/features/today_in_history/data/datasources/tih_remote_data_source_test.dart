@@ -96,7 +96,9 @@ void main() {
         ),
       );
 
-      test('Should return a TodayEventModel object when the response is 200',
+     });
+
+       test('Should return a TodayEventModel object when the response is 200',
           () async {
         // arrange
         setUpMockHttpClientSuccess200();
@@ -117,6 +119,6 @@ void main() {
         // assert
         expect(() => call(), throwsA(Matcher.TypeMatcher<ServerException>()));
       });
-    });
+   
   });
 }
