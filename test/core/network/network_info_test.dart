@@ -1,6 +1,7 @@
 import 'package:data_connection_checker/data_connection_checker.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
+import 'package:today_in_history/core/network/network_info.dart';
 
 class MockDataConnectionChecker extends Mock implements DataConnectionChecker {}
 

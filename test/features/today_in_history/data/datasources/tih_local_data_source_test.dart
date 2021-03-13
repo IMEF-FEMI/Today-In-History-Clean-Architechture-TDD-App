@@ -1,6 +1,8 @@
 import 'dart:convert';
 
 import 'package:flutter_test/flutter_test.dart';
+import 'package:mockito/mockito.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'package:today_in_history/features/today_in_history/data/datasources/tih_local_data_source.dart';
 import 'package:today_in_history/features/today_in_history/data/models/today_events_model.dart';
 import '../../../../fixtures/fixture_reader.dart';
@@ -31,7 +33,7 @@ void main() {
       final result = await dataSource.getLastTIHEvent();
       // assert
       verify(mockSharedPreferences.getString(CACHED_EVENTS));
-      expect(result, equals(result));
+      expect(result, equals(tEventsModel));
     });
   });
 

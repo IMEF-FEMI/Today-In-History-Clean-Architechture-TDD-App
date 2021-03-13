@@ -17,17 +17,20 @@ class TodayEventsModel extends TodayEvents {
       date: json['date'],
       url: json['url'],
       events:
-          json['data']['events'].map((event) => Event.fromJson(event)).toList(),
+          json['data']['Events'].map((event) => Event.fromJson(event)).toList(),
     );
   }
   factory TodayEventsModel.fromLocalJson(Map json) {
+    
     return TodayEventsModel(
       date: json['date'],
       url: json['url'],
-      events: json['events'].map((event) => Event.fromLocalJson(json)).toList(),
+      events: json['events']
+          .map((event) => Event.fromLocalJson(json))
+          .toList<Event>(),
     );
   }
-  
+
   Map toJson() => {
         "date": date,
         "url": url,

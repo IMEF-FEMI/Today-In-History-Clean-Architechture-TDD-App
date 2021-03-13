@@ -1,5 +1,4 @@
 import 'dart:async';
-
 import 'package:bloc/bloc.dart';
 import 'package:meta/meta.dart';
 import 'package:today_in_history/core/error/failures.dart';
@@ -7,6 +6,7 @@ import 'package:today_in_history/core/usecase/usecase.dart';
 import 'package:today_in_history/features/today_in_history/data/models/today_events_model.dart';
 import 'package:today_in_history/features/today_in_history/domain/usecases/get_events_for_date.dart';
 import 'package:today_in_history/features/today_in_history/domain/usecases/get_events_for_today.dart';
+import 'package:dartz/dartz.dart';
 
 part 'today_in_history_event.dart';
 part 'today_in_history_state.dart';
@@ -25,7 +25,8 @@ class TodayInHistoryBloc
   })  : assert(date != null),
         assert(today != null),
         getEventsForDate = date,
-        getEventsForToday = today;
+        getEventsForToday = today,
+        super(Empty());
 
   @override
   Stream<TodayInHistoryState> mapEventToState(
@@ -39,7 +40,7 @@ class TodayInHistoryBloc
       ));
       yield* _eitherLoadedOrErrorState(failureOrEvent);
     } else if (event is GetTIHForToday) {
-       yield Loading();
+      yield Loading();
       final failureOrEvent = await getEventsForToday(NoParams());
       yield* _eitherLoadedOrErrorState(failureOrEvent);
     }
