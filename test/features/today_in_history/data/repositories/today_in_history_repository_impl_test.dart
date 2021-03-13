@@ -80,17 +80,17 @@ void main() {
         //  verify that isConnected is actually called
         verify(await mockNetworkInfo.isConnected);
       });
-        test(
-      'should check if the device is online',
-      () async {
-        // arrange
-        when(mockNetworkInfo.isConnected).thenAnswer((_) async => true);
-        // act
-        repository.getConcreteNumberTrivia(tNumber);
-        // assert
-        verify(mockNetworkInfo.isConnected);
-      },
-    );
+      test(
+        'should check if the device is online',
+        () async {
+          // arrange
+          when(mockNetworkInfo.isConnected).thenAnswer((_) async => true);
+          // act
+          repository.getConcreteNumberTrivia(tNumber);
+          // assert
+          verify(mockNetworkInfo.isConnected);
+        },
+      );
 
       runTestOnline(() {
         test(
@@ -171,10 +171,7 @@ void main() {
     });
   });
 
-
-
   group('get event for today', () {
- 
     final tTodayEventsModel = TodayEventsModel(
       date: "February 14",
       url: "https://wikipedia.org/wiki/February_14",
@@ -279,5 +276,4 @@ void main() {
       });
     });
   });
-
 }
