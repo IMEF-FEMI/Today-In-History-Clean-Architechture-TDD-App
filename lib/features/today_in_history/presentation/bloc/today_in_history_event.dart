@@ -19,4 +19,8 @@ class GetTIHForSpecificDay extends TodayInHistoryEvent {
   List<Object> get props => [month, day];
 }
 
-class GetTIHForToday extends TodayInHistoryEvent {}
+class GetTIHForToday extends TodayInHistoryEvent {
+
+  @override
+  List<Object> get props => [month, day];
+}
