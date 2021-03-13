@@ -132,7 +132,7 @@ void main() {
       expectLater(bloc, emitsInOrder(expected));
 
       // act
-      bloc.add(GetTIHForSpecificDay(Params(month: tMonth, day: tDay)));
+      bloc.add(GetTIHForSpecificDay(month: tMonth, day: tDay));
       await untilCalled(mockGetEventsForToday(NoParams()));
     });
 
