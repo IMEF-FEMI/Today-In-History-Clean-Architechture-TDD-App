@@ -151,7 +151,20 @@ void main() {
           expect(result, equals(Right(tTodayEvents)));
         });
 
-        
+         test('should return ChacheFailure when there is no chached data present',
+          () async {
+        // arrange
+        when(mockLocalDataSource.getLastTIHEvent()).thenThrow(CacheException());
+
+        // act
+        final result = await repository.getEventsForDate(tMonth, tDay);
+
+        // assert
+        verifyZeroInteractions(mockRemoteDataSource);
+        verify(mockLocalDataSource.getLastTIHEvent());
+        expect(result, equals(Left(CacheFailure())));
+      });
+    
       });
 
      
