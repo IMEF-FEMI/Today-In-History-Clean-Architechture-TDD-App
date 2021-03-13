@@ -1,4 +1,4 @@
-abstract class Failure extends extends Equatable{}
+abstract class Failure  extends Equatable{}
 
 class ServerFailure extends Failure {}
 
