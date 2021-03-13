@@ -60,7 +60,7 @@ void main() {
         final result = await dataSource.getEventsForDate(tMonth, tDay);
 
         // assert
-        expect(result., equals(tTodayEventsModel));
+        expect(result, equals(tTodayEventsModel));
       });
 
       test('Should throw ServerException when the response is not 200',
