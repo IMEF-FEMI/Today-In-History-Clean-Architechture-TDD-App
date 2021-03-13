@@ -1,0 +1,43 @@
+-------------------- Auto-Git Log --------------------
+		Sat Mar 13 2021 03:04:33 GMT+0100 (West Africa Standard Time)
+------------------------------------------------------
+
+Modified files:
+* .autogit/autogit.json
+* lib/features/today_in_history/domain/entities/today_events.dart
+* lib/features/today_in_history/domain/repositories/today_in_history_repository.dart
+* pubspec.yaml
+
+
+Created files:
+* .autogit/logs/log-12-2-2021-21-9-54.txt
+* lib/core/error/exceptions.dart
+* lib/core/error/failures.dart
+* lib/core/usecase/usecase.dart
+* lib/features/today_in_history/data/datasources/datasources.dart
+* lib/features/today_in_history/data/datasources/tih_local_data_source.dart
+* lib/features/today_in_history/data/datasources/tih_remote_data_source.dart
+* lib/features/today_in_history/data/models/today_events_model.dart
+* lib/features/today_in_history/data/repositories/today_in_history_repository_impl.dart
+* lib/features/today_in_history/domain/usecases/get_events_for_date.dart
+* lib/features/today_in_history/domain/usecases/get_events_for_today.dart
+* lib/features/today_in_history/presentation/bloc/today_in_history_bloc.dart
+* lib/features/today_in_history/presentation/bloc/today_in_history_event.dart
+* lib/features/today_in_history/presentation/bloc/today_in_history_state.dart
+* test/features/today_in_history/data/datasources/tih_local_data_source_test.dart
+* test/features/today_in_history/data/datasources/tih_remote_data_source_test.dart
+* test/features/today_in_history/data/models/today_events_model_test.dart
+* test/features/today_in_history/data/repositories/today_in_history_repository_impl_test.dart
+* test/features/today_in_history/domain/usecases/get_events_for_date_test.dart
+* test/features/today_in_history/domain/usecases/get_events_for_today_test.dart
+* test/features/today_in_history/presentation/bloc/today_in_history_bloc_test.dart
+* test/fixtures/event.json
+* test/fixtures/event_cached.json
+* test/fixtures/fixture_reader.dart
+
+
+Deleted files:
+* test/widget_test.dart
+
+
+Renamed files:
