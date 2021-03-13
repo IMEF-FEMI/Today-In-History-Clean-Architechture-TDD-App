@@ -80,6 +80,7 @@ void main() {
         //  verify that isConnected is actually called
         verify(await mockNetworkInfo.isConnected);
       });
+    });
 
       runTestOnline(() {
         test(
@@ -157,7 +158,6 @@ void main() {
         verify(mockLocalDataSource.getLastTIHEvent());
         expect(result, equals(Left(CacheFailure())));
       });
-    });
   });
 
 
