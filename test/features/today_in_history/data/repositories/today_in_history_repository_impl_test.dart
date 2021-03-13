@@ -259,9 +259,8 @@ void main() {
           verify(mockLocalDataSource.getLastTIHEvent());
           expect(result, equals(Right(tTodayEvents)));
         });
-      });
 
-      test('should return ChacheFailure when there is no chached data present',
+              test('should return ChacheFailure when there is no chached data present',
           () async {
         // arrange
         when(mockLocalDataSource.getLastTIHEvent()).thenThrow(CacheException());
@@ -274,6 +273,9 @@ void main() {
         verify(mockLocalDataSource.getLastTIHEvent());
         expect(result, equals(Left(CacheFailure())));
       });
+      });
+
+
   });
 
 

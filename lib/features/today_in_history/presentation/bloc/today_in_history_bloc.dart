@@ -1,5 +1,6 @@
 import 'dart:async';
 import 'package:bloc/bloc.dart';
+import 'package:equatable/equatable.dart';
 import 'package:meta/meta.dart';
 import 'package:today_in_history/core/error/failures.dart';
 import 'package:today_in_history/core/usecase/usecase.dart';

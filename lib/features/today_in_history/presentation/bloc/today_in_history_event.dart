@@ -1,7 +1,10 @@
 part of 'today_in_history_bloc.dart';
 
 @immutable
-abstract class TodayInHistoryEvent {}
+abstract class TodayInHistoryEvent extends Equatable {
+  @override
+  List<Object> get props => [];
+}
 
 class GetTIHForSpecificDay extends TodayInHistoryEvent {
   final int month;

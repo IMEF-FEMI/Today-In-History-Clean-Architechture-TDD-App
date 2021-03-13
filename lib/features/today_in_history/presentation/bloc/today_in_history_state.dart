@@ -1,7 +1,10 @@
 part of 'today_in_history_bloc.dart';
 
 @immutable
-abstract class TodayInHistoryState {}
+abstract class TodayInHistoryState extends Equatable{
+   @override
+  List<Object> get props => [];
+}
 
 class Empty extends TodayInHistoryState {}
 
