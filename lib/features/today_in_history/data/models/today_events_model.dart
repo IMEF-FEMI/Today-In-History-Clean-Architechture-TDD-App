@@ -5,7 +5,7 @@ class TodayEventsModel extends TodayEvents {
   TodayEventsModel({
     @required String date,
     @required String url,
-    @required List events,
+    @required List<Event> events,
   }) : super(
           date: date,
           events: events,
