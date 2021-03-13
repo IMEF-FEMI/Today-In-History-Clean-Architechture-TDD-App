@@ -40,7 +40,6 @@ void main() {
       });
 
       body();
-    });
   }
 
   void runTestOffline(Function body) {
@@ -49,7 +48,6 @@ void main() {
       });
 
       body();
-    });
   }
 
   group('get event for specific days', () {
