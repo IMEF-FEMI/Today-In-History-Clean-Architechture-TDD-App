@@ -17,6 +17,16 @@ class MockLocalDataSource extends Mock implements TIHLocalDataSourceImpl {}
 
 class MockNetworkInfo extends Mock implements NetworkInfo {}
 
+  void runTestOnline(Function body) {
+    group('device is online', () {
+      setUp(() {
+        when(mockNetworkInfo.isConnected).thenAnswer((_) async => true);
+      });
+
+      body();
+    });
+  }
+
 void main() {
   TodayInHistoryRepository repository;
   MockLocalDataSource mockLocalDataSource;
@@ -32,16 +42,6 @@ void main() {
       networkInfo: mockNetworkInfo,
     );
   });
-
-  void runTestOnline(Function body) {
-    group('device is online', () {
-      setUp(() {
-        when(mockNetworkInfo.isConnected).thenAnswer((_) async => true);
-      });
-
-      body();
-    });
-  }
 
   void runTestOffline(Function body) {
     group('device is offline', () {
