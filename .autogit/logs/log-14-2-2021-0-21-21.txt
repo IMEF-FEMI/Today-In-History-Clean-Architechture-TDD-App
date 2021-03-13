@@ -1,0 +1,16 @@
+-------------------- Auto-Git Log --------------------
+		Sun Mar 14 2021 00:21:21 GMT+0100 (West Africa Standard Time)
+------------------------------------------------------
+
+Modified files:
+* lib/core/error/failures.dart
+
+
+Created files:
+* .autogit/logs/log-14-2-2021-0-21-11.txt
+
+
+Deleted files:
+
+
+Renamed files:
