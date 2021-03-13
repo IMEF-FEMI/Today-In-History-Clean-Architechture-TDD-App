@@ -11,7 +11,7 @@ import 'package:today_in_history/features/today_in_history/data/repositories/tod
 import 'package:today_in_history/features/today_in_history/domain/entities/today_events.dart';
 import 'package:today_in_history/features/today_in_history/domain/repositories/today_in_history_repository.dart';
 
-class MockRemoteDataSource extends Mock implements TIHLocalDataSourceImpl {}
+class MockRemoteDataSource extends Mock implements TIHRemoteDataSourceImpl {}
 
 class MockLocalDataSource extends Mock implements TIHLocalDataSourceImpl {}
 
