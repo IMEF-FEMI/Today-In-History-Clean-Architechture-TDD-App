@@ -1,9 +1,7 @@
 part of 'today_in_history_bloc.dart';
 
 @immutable
-abstract class TodayInHistoryState extends Equatable {
-
-}
+abstract class TodayInHistoryState extends Equatable {}
 
 class Empty extends TodayInHistoryState {
   @override
@@ -27,6 +25,6 @@ class Error extends TodayInHistoryState {
   final String message;
 
   Error({@required this.message});
-   @override
+  @override
   List<Object> get props => [message];
 }
