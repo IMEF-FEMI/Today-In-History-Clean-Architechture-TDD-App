@@ -29,7 +29,7 @@ void main() {
 
   test('initialState should be empty', () {
     // assert
-    expect(bloc.., equals(Empty()));
+    expect(bloc., equals(Empty()));
   });
 
   group('get TIH for specific date', () {
