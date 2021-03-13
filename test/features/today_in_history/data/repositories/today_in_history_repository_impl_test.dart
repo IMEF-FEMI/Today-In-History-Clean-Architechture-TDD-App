@@ -192,7 +192,7 @@ void main() {
     final TodayEvents tTodayEvents = tTodayEventsModel;
 
     test('should check if device is online', () async {
-      runTestOnline(() async {
+        when(mockNetworkInfo.isConnected).thenAnswer((_) async => true);
         await repository.getEventsForToday();
         //  verify that isConnected is actually called
         verify(await mockNetworkInfo.isConnected);
