@@ -33,7 +33,7 @@ void main() {
       final result = await dataSource.getLastTIHEvent();
       // assert
       verify(mockSharedPreferences.getString(CACHED_EVENTS));
-      expect(result, equals(tEventsModel));
+      expect(result, equals(result));
     });
   });
 
