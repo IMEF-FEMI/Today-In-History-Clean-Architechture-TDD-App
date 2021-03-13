@@ -170,111 +170,111 @@ void main() {
      
   });
 
-  // group('get event for today', () {
-  //   final tTodayEventsModel = TodayEventsModel(
-  //     date: "February 14",
-  //     url: "https://wikipedia.org/wiki/February_14",
-  //     events: <Event>[
-  //       Event(
-  //         link: "https://wikipedia.org/wiki/Kaysanites_Shia#History",
-  //         text:
-  //             "Abbasid Revolution: The Hashimi rebels under Abu Muslim Khorasani take Merv, capital of the Umayyad province Khorasan, marking the consolidation of the Abbasid revolt.",
-  //         year: "748",
-  //       ),
-  //       Event(
-  //         link: "https://wikipedia.org/wiki/Charles_the_Bald",
-  //         text:
-  //             "Charles the Bald and Louis the German swear the Oaths of Strasbourg in the French and German languages.",
-  //         year: "842",
-  //       ),
-  //     ],
-  //   );
-  //   final TodayEvents tTodayEvents = tTodayEventsModel;
+  group('get event for today', () {
+    final tTodayEventsModel = TodayEventsModel(
+      date: "February 14",
+      url: "https://wikipedia.org/wiki/February_14",
+      events: <Event>[
+        Event(
+          link: "https://wikipedia.org/wiki/Kaysanites_Shia#History",
+          text:
+              "Abbasid Revolution: The Hashimi rebels under Abu Muslim Khorasani take Merv, capital of the Umayyad province Khorasan, marking the consolidation of the Abbasid revolt.",
+          year: "748",
+        ),
+        Event(
+          link: "https://wikipedia.org/wiki/Charles_the_Bald",
+          text:
+              "Charles the Bald and Louis the German swear the Oaths of Strasbourg in the French and German languages.",
+          year: "842",
+        ),
+      ],
+    );
+    final TodayEvents tTodayEvents = tTodayEventsModel;
 
-  //   test('should check if device is online', () async {
-  //       when(mockNetworkInfo.isConnected).thenAnswer((_) async => true);
-  //       await repository.getEventsForToday();
-  //       //  verify that isConnected is actually called
-  //       verify(await mockNetworkInfo.isConnected);
+    test('should check if device is online', () async {
+        when(mockNetworkInfo.isConnected).thenAnswer((_) async => true);
+        await repository.getEventsForToday();
+        //  verify that isConnected is actually called
+        verify(await mockNetworkInfo.isConnected);
 
-  //   });
+    });
 
-  //     runTestOnline(() {
-  //       test(
-  //           'should return remote data when the call to remote data source is successful',
-  //           () async {
-  //         // arrange
-  //         when(mockRemoteDataSource.getEventsForToday())
-  //             .thenAnswer((_) async => tTodayEventsModel);
-  //         // act
-  //         final result = await repository.getEventsForToday();
+      runTestOnline(() {
+        test(
+            'should return remote data when the call to remote data source is successful',
+            () async {
+          // arrange
+          when(mockRemoteDataSource.getEventsForToday())
+              .thenAnswer((_) async => tTodayEventsModel);
+          // act
+          final result = await repository.getEventsForToday();
 
-  //         // assert
-  //         verify(mockRemoteDataSource.getEventsForToday());
-  //         expect(result, equals(Right(tTodayEvents)));
-  //       });
+          // assert
+          verify(mockRemoteDataSource.getEventsForToday());
+          expect(result, equals(Right(tTodayEvents)));
+        });
 
-  //       test(
-  //           'should cache the data locally when the call to remote data source is successful',
-  //           () async {
-  //         // arrange
-  //         when(mockRemoteDataSource.getEventsForToday())
-  //             .thenAnswer((_) async => tTodayEventsModel);
-  //         // act
-  //         await repository.getEventsForToday();
+        test(
+            'should cache the data locally when the call to remote data source is successful',
+            () async {
+          // arrange
+          when(mockRemoteDataSource.getEventsForToday())
+              .thenAnswer((_) async => tTodayEventsModel);
+          // act
+          await repository.getEventsForToday();
 
-  //         // assert
-  //         verify(mockRemoteDataSource.getEventsForToday());
-  //         verify(mockLocalDataSource.cacheTIHEvents(tTodayEvents));
-  //       });
+          // assert
+          verify(mockRemoteDataSource.getEventsForToday());
+          verify(mockLocalDataSource.cacheTIHEvents(tTodayEvents));
+        });
 
-  //       test(
-  //           'should return server failure when the call to remote data source is unsuccessful',
-  //           () async {
-  //         // arrange
-  //         when(mockRemoteDataSource.getEventsForToday())
-  //             .thenThrow(ServerException());
-  //         // act
+        test(
+            'should return server failure when the call to remote data source is unsuccessful',
+            () async {
+          // arrange
+          when(mockRemoteDataSource.getEventsForToday())
+              .thenThrow(ServerException());
+          // act
 
-  //         final result = await repository.getEventsForToday();
+          final result = await repository.getEventsForToday();
 
-  //         // assert
-  //         verify(mockRemoteDataSource.getEventsForToday());
-  //         verifyZeroInteractions(mockLocalDataSource);
-  //         expect(result, equals(Left(ServerFailure())));
-  //       });
-  //     });
+          // assert
+          verify(mockRemoteDataSource.getEventsForToday());
+          verifyZeroInteractions(mockLocalDataSource);
+          expect(result, equals(Left(ServerFailure())));
+        });
+      });
 
-  //     runTestOffline(() {
-  //       test(
-  //           'should return last locally chached data, when the cached data is present',
-  //           () async {
-  //         // arrange
-  //         when(mockLocalDataSource.getLastTIHEvent())
-  //             .thenAnswer((_) async => tTodayEventsModel);
-  //         // act
-  //         final result = await repository.getEventsForToday();
-  //         // assert
-  //         verifyZeroInteractions(mockRemoteDataSource);
-  //         verify(mockLocalDataSource.getLastTIHEvent());
-  //         expect(result, equals(Right(tTodayEvents)));
-  //       });
-  //     });
+      runTestOffline(() {
+        test(
+            'should return last locally chached data, when the cached data is present',
+            () async {
+          // arrange
+          when(mockLocalDataSource.getLastTIHEvent())
+              .thenAnswer((_) async => tTodayEventsModel);
+          // act
+          final result = await repository.getEventsForToday();
+          // assert
+          verifyZeroInteractions(mockRemoteDataSource);
+          verify(mockLocalDataSource.getLastTIHEvent());
+          expect(result, equals(Right(tTodayEvents)));
+        });
+      });
 
-  //     test('should return ChacheFailure when there is no chached data present',
-  //         () async {
-  //       // arrange
-  //       when(mockLocalDataSource.getLastTIHEvent()).thenThrow(CacheException());
+      test('should return ChacheFailure when there is no chached data present',
+          () async {
+        // arrange
+        when(mockLocalDataSource.getLastTIHEvent()).thenThrow(CacheException());
 
-  //       // act
-  //       final result = await repository.getEventsForToday();
+        // act
+        final result = await repository.getEventsForToday();
 
-  //       // assert
-  //       verifyZeroInteractions(mockRemoteDataSource);
-  //       verify(mockLocalDataSource.getLastTIHEvent());
-  //       expect(result, equals(Left(CacheFailure())));
-  //     });
-  // });
+        // assert
+        verifyZeroInteractions(mockRemoteDataSource);
+        verify(mockLocalDataSource.getLastTIHEvent());
+        expect(result, equals(Left(CacheFailure())));
+      });
+  });
 
 
 }
