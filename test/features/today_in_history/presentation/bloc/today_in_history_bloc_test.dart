@@ -1,3 +1,4 @@
+import 'package:dartz/dartz.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
 import 'package:today_in_history/core/error/failures.dart';
@@ -29,7 +30,7 @@ void main() {
 
   test('initialState should be empty', () {
     // assert
-    expect(bloc., equals(Empty()));
+    expect(bloc.state, equals(Empty()));
   });
 
   group('get TIH for specific date', () {
