@@ -11,7 +11,10 @@ class Empty extends TodayInHistoryState {
   List<Object> get props => ["Empty"];
 }
 
-class Loading extends TodayInHistoryState {}
+class Loading extends TodayInHistoryState {
+     @override
+  List<Object> get props => ["Loading"];
+}
 
 class Loaded extends TodayInHistoryState {
   final TodayEventsModel eventsModel;
