@@ -51,29 +51,8 @@ void main() {
         ),
       );
 
-      test('Should return a TodayEventModel object when the response is 200',
-          () async {
-        // arrange
-        setUpMockHttpClientSuccess200();
-        // act
-        final result = dataSource.getEventsForDate(tMonth, tDay);
-
-        // assert
-        expect(result, equals(tTodayEventsModel));
-      });
-
-      test('Should throw ServerException when the response is not 200',
-          () async {
-        // arrange
-        setUpMockHttpClientFailure404();
-        // act
-        final call = dataSource.getEventsForDate;
-
-        // assert
-        expect(() => call(tMonth, tDay),
-            throwsA(Matcher.TypeMatcher<ServerException>()));
-      });
     });
+    
   });
 
   group('get Today in history for today', () {
