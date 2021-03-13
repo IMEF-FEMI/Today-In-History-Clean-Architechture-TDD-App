@@ -1,5 +1,6 @@
 import 'dart:convert';
 
+import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
 import 'package:today_in_history/core/error/exceptions.dart';
@@ -72,7 +73,7 @@ void main() {
         final call = dataSource.getEventsForDate;
 
         // assert
-        expect(()=>call(tMonth, tDay),throwsA(Matcher.TypeMatcher<ServerException>()) )
+        expect(()=>call(tMonth, tDay),throwsA(Matcher.TypeMatcher<ServerException>()) );
       });
     });
   });
