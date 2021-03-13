@@ -5,12 +5,13 @@ import 'package:today_in_history/core/error/exceptions.dart';
 import 'package:today_in_history/core/error/failures.dart';
 import 'package:today_in_history/core/network/network_info.dart';
 import 'package:today_in_history/features/today_in_history/data/datasources/datasources.dart';
+import 'package:today_in_history/features/today_in_history/data/datasources/tih_local_data_source.dart';
 import 'package:today_in_history/features/today_in_history/data/models/today_events_model.dart';
 import 'package:today_in_history/features/today_in_history/data/repositories/today_in_history_repository_impl.dart';
 import 'package:today_in_history/features/today_in_history/domain/entities/today_events.dart';
 import 'package:today_in_history/features/today_in_history/domain/repositories/today_in_history_repository.dart';
 
-class MockRemoteDataSource extends Mock implements TIHRemoteDataSource {}
+class MockRemoteDataSource extends Mock implements TIHLocalDataSourceImpl {}
 
 class MockLocalDataSource extends Mock implements TIHLocalDataSourceImpl {}
 
