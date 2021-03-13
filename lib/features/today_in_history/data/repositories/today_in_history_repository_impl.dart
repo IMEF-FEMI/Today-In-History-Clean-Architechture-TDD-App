@@ -1,3 +1,4 @@
+import 'package:dartz/dartz.dart';
 import 'package:flutter/foundation.dart';
 import 'package:today_in_history/core/error/exceptions.dart';
 import 'package:today_in_history/core/error/failures.dart';
@@ -20,7 +21,7 @@ class TodayInHistoryRepositoryImpl implements TodayInHistoryRepository {
 
   @override
   Future<Either<Failure, TodayEvents>> getEventsForDate(int month, int day) {
-    return await _getEvents(() {
+    return  _getEvents(() {
       return remoteDataSource.getEventsForDate(month, day);
     });
   }

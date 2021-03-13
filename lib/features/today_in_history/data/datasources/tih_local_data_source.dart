@@ -1,9 +1,9 @@
 import 'dart:convert';
 
 import 'package:flutter/foundation.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'package:today_in_history/core/error/exceptions.dart';
 import 'package:today_in_history/features/today_in_history/data/models/today_events_model.dart';
-import 'package:today_in_history/features/today_in_history/domain/entities/today_events.dart';
 
 import 'datasources.dart';
 
@@ -25,7 +25,7 @@ class TIHLocalDataSourceImpl implements TIHLocalDataSource {
     final jsonString = sharedPreferences.getString(CACHED_EVENTS);
 
     if (jsonString != null) {
-      return Future.value(TodayEventsModel.fromLocalJson(jsonString));
+      return Future.value(TodayEventsModel.fromLocalJson(json.decode(jsonString)));
     } else {
       throw CacheException();
     }
