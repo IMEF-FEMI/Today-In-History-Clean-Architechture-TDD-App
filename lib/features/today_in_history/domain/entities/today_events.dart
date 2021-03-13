@@ -8,8 +8,7 @@ class TodayEvents extends Equatable {
   TodayEvents({this.date, this.url, this.events});
 
   @override
-  // TODO: implement props
-  List<Object> get props => [];
+  List<Object> get props => [date,];
 }
 
 class Event {
