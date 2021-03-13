@@ -22,7 +22,7 @@ class TodayInHistoryRepositoryImpl implements TodayInHistoryRepository {
 
   @override
   Future<Either<Failure, TodayEvents>> getEventsForDate(int month, int day) {
-    return  _getEvents(() {
+    return _getEvents(() {
       return remoteDataSource.getEventsForDate(month, day);
     });
   }
@@ -39,7 +39,7 @@ class TodayInHistoryRepositoryImpl implements TodayInHistoryRepository {
     if (await networkInfo.isConnected) {
       try {
         final remoteEvent = await todayOrSpecificDay();
-        localDataSource.cacheTIHEvents(remoteEvent)
+       await localDataSource.cacheTIHEvents(remoteEvent);
         return Right(remoteEvent);
       } on ServerException {
         return Left(ServerFailure());
