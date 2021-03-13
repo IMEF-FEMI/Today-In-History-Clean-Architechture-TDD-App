@@ -1,0 +1,16 @@
+-------------------- Auto-Git Log --------------------
+		Sat Mar 13 2021 22:30:29 GMT+0100 (West Africa Standard Time)
+------------------------------------------------------
+
+Modified files:
+* lib/features/today_in_history/domain/entities/today_events.dart
+
+
+Created files:
+* .autogit/logs/log-13-2-2021-3-31-44.txt
+
+
+Deleted files:
+
+
+Renamed files:
