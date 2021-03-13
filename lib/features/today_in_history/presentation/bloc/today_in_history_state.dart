@@ -6,7 +6,9 @@ abstract class TodayInHistoryState extends Equatable{
   List<Object> get props => [];
 }
 
-class Empty extends TodayInHistoryState {}
+class Empty extends TodayInHistoryState {
+  
+}
 
 class Loading extends TodayInHistoryState {}
 
