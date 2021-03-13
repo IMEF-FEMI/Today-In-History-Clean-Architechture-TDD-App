@@ -50,7 +50,7 @@ class TodayInHistoryBloc
   Stream<TodayInHistoryState> _eitherLoadedOrErrorState(
       Either<Failure, TodayEventsModel> failureOrTrivia) async* {
         if (failureOrTrivia.runtimeType == Failure) {
-          
+          return Error(message: _mapFailureToMessage(failure))
         }
     yield  failureOrTrivia.fold(
       (failure) => Error(message: _mapFailureToMessage(failure)),
