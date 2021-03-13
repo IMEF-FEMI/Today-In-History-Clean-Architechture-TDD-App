@@ -91,7 +91,7 @@ void main() {
 
       // act
       bloc.add(GetTIHForSpecificDay(month: tMonth, day: tDay));
-      await untilCalled(mockGetEventsForDate(any, any));
+      await untilCalled(mockGetEventsForDate(Params(month: tMonth, day: tDay)));
     });
 
   });
