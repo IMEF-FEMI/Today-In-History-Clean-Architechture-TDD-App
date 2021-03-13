@@ -196,7 +196,6 @@ void main() {
         await repository.getEventsForToday();
         //  verify that isConnected is actually called
         verify(await mockNetworkInfo.isConnected);
-      });
 
     });
 
