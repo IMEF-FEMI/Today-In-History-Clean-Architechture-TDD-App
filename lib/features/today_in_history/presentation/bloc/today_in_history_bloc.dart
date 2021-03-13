@@ -49,7 +49,7 @@ class TodayInHistoryBloc
 
   Stream<TodayInHistoryState> _eitherLoadedOrErrorState(
       Either<Failure, TodayEventsModel> failureOrTrivia) async* {
-        if () {
+        if (failureOrTrivia.runtimeType) {
           
         }
     yield  failureOrTrivia.fold(
