@@ -106,7 +106,7 @@ void main() {
         final TodayEventsModel result = await dataSource.getEventsForToday();
 
         // assert
-        expect(result, equals(tTodayEventsModel));
+        expect(result.toJson(), equals(tTodayEventsModel));
       });
 
       test('Should throw ServerException when the response is not 200',
