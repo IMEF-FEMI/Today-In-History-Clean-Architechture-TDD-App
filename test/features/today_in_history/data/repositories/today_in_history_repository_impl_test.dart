@@ -22,8 +22,8 @@ void main() {
   MockRemoteDataSource mockRemoteDataSource;
   MockNetworkInfo mockNetworkInfo;
   setUp(() {
-    mockLocalDataSource = TIHLocalDataSource();
-    mockRemoteDataSource = TIHRemoteDataSource();
+    mockLocalDataSource = MockLocalDataSource();
+    mockRemoteDataSource = MockRemoteDataSource();
      mockNetworkInfo = MockNetworkInfo();
     repository = TodayInHistoryRepositoryImpl(
       remoteDataSource: mockRemoteDataSource,
