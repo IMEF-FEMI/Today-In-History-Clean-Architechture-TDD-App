@@ -80,6 +80,7 @@ void main() {
         //  verify that isConnected is actually called
         verify(await mockNetworkInfo.isConnected);
       });
+      
 
       runTestOnline(() {
         test(
