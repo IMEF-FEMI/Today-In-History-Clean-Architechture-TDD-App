@@ -21,7 +21,7 @@ class TodayEventsModel extends TodayEvents {
     );
   }
   factory TodayEventsModel.fromLocalJson(Map json) {
-    print(json['events']);
+    print(json['events'].runtimeType);
     return TodayEventsModel(
       date: json['date'],
       url: json['url'],
