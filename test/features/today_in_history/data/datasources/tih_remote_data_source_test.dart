@@ -72,7 +72,7 @@ void main() {
         final call = dataSource.getEventsForDate;
 
         // assert
-        expect(()=>call(tMonth, tDay),throwsA(Matcher.TypeMatcher<ServerException>()) );
+        expect(()=>call(tMonth, tDay),throwsA(<ServerException>()) );
       });
     });
   });
