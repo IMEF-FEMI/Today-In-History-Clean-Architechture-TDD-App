@@ -47,7 +47,7 @@ void main() {
 
       final result2 = tEventsForDay.toJson();
         // assert
-      expect(TodayEventsModel.fromLocalJson(result1), TodayEventsModel.fromLocalJson(result2));
+      expect(TodayEventsModel.fromLocalJson(result1).toJson(), TodayEventsModel.fromLocalJson(result2).toJson());
 
     });
   });
