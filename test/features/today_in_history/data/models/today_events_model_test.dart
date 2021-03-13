@@ -37,7 +37,7 @@ void main() {
       expect(result.toJson(), tEventsForDay.toJson());
     });
 
-    test('Should ensure the model saves and retrieve in the same patter',
+    test('Should ensure the model saves and retrieve in the same pattern',
         () async {
           
         // act
