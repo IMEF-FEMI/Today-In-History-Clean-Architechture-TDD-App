@@ -57,7 +57,7 @@ void main() {
         // arrange
         setUpMockHttpClientSuccess200();
         // act
-        final result = dataSource.getEventsForDate(tMonth, tDay);
+        final result = await dataSource.getEventsForDate(tMonth, tDay);
 
         // assert
         expect(result, equals(tTodayEventsModel));
