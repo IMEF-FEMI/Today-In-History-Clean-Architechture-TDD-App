@@ -32,19 +32,23 @@ void main() {
   });
 
   void runTestOnline(Function body) {
+    group('device is online', () {
       setUp(() {
         when(mockNetworkInfo.isConnected).thenAnswer((_) async => true);
       });
 
       body();
+    });
   }
 
   void runTestOffline(Function body) {
+    group('device is offline', () {
       setUp(() {
         when(mockNetworkInfo.isConnected).thenAnswer((_) async => false);
       });
 
       body();
+    });
   }
 
   group('get event for specific days', () {
