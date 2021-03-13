@@ -7,5 +7,5 @@ class ServerFailure extends Failure {
 
 class CacheFailure extends Failure {
     @override
-  String toString() => "Server Failure";
+  String toString() => "Cache Failure";
 }
