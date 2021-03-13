@@ -24,6 +24,7 @@ class Event {
   }
 
   Event.fromLocalJson(Map json) {
+    print(json);
     year = json['year'];
     text = json['text'];
     link = json['link'];
