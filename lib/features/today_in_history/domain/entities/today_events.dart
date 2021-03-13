@@ -1,4 +1,4 @@
-class TodayEvents {
+class TodayEvents extends  {
   final String date;
   final String url;
   final List events;
