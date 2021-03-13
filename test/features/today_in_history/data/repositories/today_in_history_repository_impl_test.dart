@@ -34,7 +34,7 @@ void main() {
 
   void runTestOnline(Function body) {
     group('device is online', () {
-      setUp(() {
+      setUpAll(() {
         when(mockNetworkInfo.isConnected).thenAnswer((_) async => true);
       });
 
