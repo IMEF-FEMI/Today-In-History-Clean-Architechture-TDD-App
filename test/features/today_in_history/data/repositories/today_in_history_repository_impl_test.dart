@@ -86,7 +86,7 @@ void main() {
           // arrange
           when(mockNetworkInfo.isConnected).thenAnswer((_) async => true);
           // act
-          repository.getConcreteNumberTrivia(tNumber);
+           repository.getEventsForDate(tMonth, tDay);
           // assert
           verify(mockNetworkInfo.isConnected);
         },
