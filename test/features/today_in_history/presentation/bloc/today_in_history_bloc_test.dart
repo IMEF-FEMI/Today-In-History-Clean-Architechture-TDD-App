@@ -121,9 +121,9 @@ void main() {
     test('Should emit [Loading, Loaded] when data is gotten successfully',
         () async {
       // arrange
-      when(mockGetEventsForToday(any))
-          .thenAnswer((_) async => Right(tEventsForDay));
-
+    when(mockGetEventsForDate(any)).thenAnswer((_) async {
+        return Right(tEventsForDay);
+      });
       // assert later
       final expected = [
         // Empty(),
