@@ -154,7 +154,7 @@ void main() {
 
       // act
       bloc.add(GetTIHForToday());
-      await untilCalled(mockGetEventsForToday(NoParams()));
+      await untilCalled(mockGetEventsForToday(any));
     });
   });
 }
