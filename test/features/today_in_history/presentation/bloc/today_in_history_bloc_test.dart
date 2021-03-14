@@ -58,8 +58,7 @@ void main() {
     test('Should emit [Loading, Loaded] when data is gotten successfully',
         () async {
       // arrange
-      when(mockGetEventsForDate(any)).thenAnswer((_) async => Right(tEventsForDay);
-      });
+      when(mockGetEventsForDate(any)).thenAnswer((_) async => Right(tEventsForDay));
 
       // assert later
       final expected = [
