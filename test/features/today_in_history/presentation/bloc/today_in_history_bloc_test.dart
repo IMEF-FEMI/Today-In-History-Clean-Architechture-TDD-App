@@ -78,7 +78,7 @@ void main() {
 
     test('Should emit [Loading, Error] when getting data fails', () async {
       // arrange
-      when(mockGetEventsForDate(Params(month: tMonth, day: tDay)))
+      when(mockGetEventsForDate(any))
           .thenAnswer((_) async => Left(ServerFailure()));
 
       // assert later
