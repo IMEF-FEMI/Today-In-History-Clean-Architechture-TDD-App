@@ -12,4 +12,7 @@ Future<void> init() async {
       today: serviceLocator(),
     ),
   );
+
+    // use cases
+    
 }
