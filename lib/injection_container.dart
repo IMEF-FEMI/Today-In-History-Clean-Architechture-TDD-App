@@ -7,11 +7,7 @@ Future<void> init() async {
   //! Features - Number Trivia
   // Bloc
   serviceLocator.registerFactory(
-    () => TodayInHistoryBloc(date: date, today: today)(
-      concrete: sl(),
-      inputConverter: sl(),
-      random: sl(),
-    ),
+    () => TodayInHistoryBloc(date: date, today: today),
   );
 
 }
