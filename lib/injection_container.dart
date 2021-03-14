@@ -1,2 +1,2 @@
-///service locator
-final sl = GetIt.instance;
+
+final serviceLocator = GetIt.instance;
