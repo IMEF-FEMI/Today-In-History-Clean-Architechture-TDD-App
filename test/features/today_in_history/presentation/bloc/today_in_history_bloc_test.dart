@@ -140,7 +140,7 @@ void main() {
 
     test('Should emit [Loading, Error] when getting data fails', () async {
       // arrange
-      when(mockGetEventsForToday(NoParams()))
+      when(mockGetEventsForToday(any))
           .thenAnswer((_) async => Left(ServerFailure()));
 
       // assert later
