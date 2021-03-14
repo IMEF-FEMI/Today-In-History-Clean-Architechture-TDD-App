@@ -135,7 +135,7 @@ void main() {
 
       // act
       bloc.add(GetTIHForSpecificDay(month: tMonth, day: tDay));
-      await untilCalled(mockGetEventsForToday(NoParams()));
+      await untilCalled(mockGetEventsForToday(any));
     });
 
     test('Should emit [Loading, Error] when getting data fails', () async {
