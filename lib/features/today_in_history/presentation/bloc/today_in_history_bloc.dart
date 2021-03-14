@@ -40,11 +40,7 @@ class TodayInHistoryBloc
         month: event.month,
         day: event.day,
       ));
-      print("------");
-      print("-----");
-      print("----");
-      print("---");
-      print(failureOrEvent.runtimeType);
+     
       yield* _eitherLoadedOrErrorState(failureOrEvent);
     } else if (event is GetTIHForToday) {
       yield Loading();
