@@ -5,8 +5,8 @@ final serviceLocator = GetIt.instance;
 Future<void> init() async {
   //! Features - Number Trivia
   // Bloc
-  sl.registerFactory(
-    () => NumberTriviaBloc(
+  serviceLocator.registerFactory(
+    () => TIH(
       concrete: sl(),
       inputConverter: sl(),
       random: sl(),
