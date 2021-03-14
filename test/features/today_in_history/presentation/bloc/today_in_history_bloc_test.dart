@@ -79,7 +79,7 @@ void main() {
     test('Should emit [Loading, Error] when getting data fails', () async {
       // arrange
       when(mockGetEventsForDate(any))
-          .thenReturn(Left(ServerFailure());
+          .thenReturn(()async => Left(ServerFailure());
 
       // assert later
       final expected = [
