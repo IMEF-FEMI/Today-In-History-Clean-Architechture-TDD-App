@@ -64,7 +64,7 @@ void main() {
 
       // assert later
       final expected = [
-        Empty(),
+        // Empty(),
         Loading(),
         Loaded(eventsModel: tEventsForDay),
       ];
