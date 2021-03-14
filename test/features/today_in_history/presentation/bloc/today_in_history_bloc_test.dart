@@ -134,7 +134,7 @@ void main() {
       expectLater(bloc, emitsInOrder(expected));
 
       // act
-      bloc.add(GetTIHForToday()(month: tMonth, day: tDay));
+      bloc.add(GetTIHForToday());
       // await untilCalled(mockGetEventsForToday(any));
     });
 
