@@ -58,8 +58,9 @@ void main() {
     test('Should emit [Loading, Loaded] when data is gotten successfully',
         () async {
       // arrange
-      when(mockGetEventsForDate(Params(month: tMonth, day: tDay)))
-          .thenAnswer((_) async => Right(tEventsForDay));
+      when(mockGetEventsForDate(any)).thenAnswer((_) async {
+        return Right(tEventsForDay);
+      });
 
       // assert later
       final expected = [
@@ -93,7 +94,6 @@ void main() {
       bloc.add(GetTIHForSpecificDay(month: tMonth, day: tDay));
       await untilCalled(mockGetEventsForDate(Params(month: tMonth, day: tDay)));
     });
-
   });
 
   group('get TIH for today', () {
@@ -156,7 +156,5 @@ void main() {
       bloc.add(GetTIHForToday());
       await untilCalled(mockGetEventsForToday(NoParams()));
     });
-
   });
-
 }

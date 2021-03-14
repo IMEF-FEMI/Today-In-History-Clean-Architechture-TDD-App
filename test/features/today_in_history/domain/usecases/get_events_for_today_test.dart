@@ -48,7 +48,6 @@ void main() {
     final result = await usecase(NoParams());
 
 // assert
-
     expect(result, Right(tTodayEvents));
     verify(mockTodayInHistoryRepository.getEventsForToday());
     verifyNoMoreInteractions(mockTodayInHistoryRepository);

@@ -5,6 +5,7 @@ import 'package:meta/meta.dart';
 import 'package:today_in_history/core/error/failures.dart';
 import 'package:today_in_history/core/usecase/usecase.dart';
 import 'package:today_in_history/features/today_in_history/data/models/today_events_model.dart';
+import 'package:today_in_history/features/today_in_history/domain/entities/today_events.dart';
 import 'package:today_in_history/features/today_in_history/domain/usecases/get_events_for_date.dart';
 import 'package:today_in_history/features/today_in_history/domain/usecases/get_events_for_today.dart';
 import 'package:dartz/dartz.dart';
@@ -39,6 +40,11 @@ class TodayInHistoryBloc
         month: event.month,
         day: event.day,
       ));
+      print("------");
+      print("-----");
+      print("----");
+      print("---");
+      print(failureOrEvent.runtimeType);
       yield* _eitherLoadedOrErrorState(failureOrEvent);
     } else if (event is GetTIHForToday) {
       yield Loading();
@@ -48,7 +54,7 @@ class TodayInHistoryBloc
   }
 
   Stream<TodayInHistoryState> _eitherLoadedOrErrorState(
-      Either<Failure, TodayEventsModel> failureOrTrivia) async* {
+      Right<Failure, TodayEvents> failureOrTrivia) async* {
     yield failureOrTrivia.fold(
       (failure) => Error(message: _mapFailureToMessage(failure)),
       (eventsModel) => Loaded(eventsModel: eventsModel),
