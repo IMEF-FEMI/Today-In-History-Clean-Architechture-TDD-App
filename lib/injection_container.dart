@@ -23,7 +23,7 @@ Future<void> init() async {
   );
 
   serviceLocator.registerLazySingleton(
-    () => GetRandomNumberTrivia(
+    () => GetEventsForToday(
       repository: serviceLocator(),
     ),
   );
