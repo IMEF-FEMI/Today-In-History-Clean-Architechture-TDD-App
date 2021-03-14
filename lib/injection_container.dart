@@ -15,7 +15,7 @@ Future<void> init() async {
 
     // use cases
       serviceLocator.registerLazySingleton(
-    () => GetConcreteNumberTrivia(
+    () => GetEventsForDate(
       repository: serviceLocator(),
     ),
   );
