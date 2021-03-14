@@ -14,15 +14,15 @@ Future<void> init() async {
   );
 
     // use cases
-      sl.registerLazySingleton(
+      serviceLocator.registerLazySingleton(
     () => GetConcreteNumberTrivia(
-      repository: sl(),
+      repository: serviceLocator(),
     ),
   );
 
-  sl.registerLazySingleton(
+  serviceLocator.registerLazySingleton(
     () => GetRandomNumberTrivia(
-      repository: sl(),
+      repository: serviceLocator(),
     ),
   );
 }
