@@ -5,6 +5,7 @@ import 'package:today_in_history/core/network/network_info.dart';
 import 'package:today_in_history/features/today_in_history/domain/repositories/today_in_history_repository.dart';
 import 'package:today_in_history/features/today_in_history/presentation/bloc/today_in_history_bloc.dart';
 import 'package:http/http.dart' as http;
+import 'package:today_in_history/features/today_in_history/presentation/date_selector_bloc/date_selector_bloc.dart';
 import 'features/today_in_history/data/datasources/datasources.dart';
 import 'features/today_in_history/data/datasources/tih_local_data_source.dart';
 import 'features/today_in_history/data/datasources/tih_remote_data_source.dart';
@@ -24,6 +25,9 @@ Future<void> init() async {
     ),
   );
 
+  serviceLocator.registerFactory(
+    () => DateSelectorBloc(),
+  );
   // use cases
   serviceLocator.registerLazySingleton(
     () => GetEventsForDate(
@@ -59,8 +63,7 @@ Future<void> init() async {
     ),
   );
 
-
-   //! Core
+  //! Core
 
   serviceLocator.registerLazySingleton<NetworkInfo>(
     () => NetworkInfoImpl(serviceLocator()),
