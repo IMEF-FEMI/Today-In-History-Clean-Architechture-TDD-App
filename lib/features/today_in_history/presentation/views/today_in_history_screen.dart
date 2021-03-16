@@ -33,7 +33,13 @@ class _TodayInHistoryViewState extends State<TodayInHistoryView> {
         body: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
-            SizedBox(height: 100),
+            SizedBox(height: 20),
+
+            Text(
+              "Today in History",
+              style: TextStyle(fontWeight: ),
+            ),
+            SizedBox(height: 50),
 
             buildDateInfo(),
             SizedBox(height: 10),
@@ -49,7 +55,7 @@ class _TodayInHistoryViewState extends State<TodayInHistoryView> {
 
   Widget buildDateInfo() {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 20),
+      padding: const EdgeInsets.symmetric(horizontal: 10),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
@@ -68,19 +74,36 @@ class _TodayInHistoryViewState extends State<TodayInHistoryView> {
                 "Date",
                 textAlign: TextAlign.start,
                 style: TextStyle(
-                  fontSize: 30,
+                  fontSize: 25,
                   fontWeight: FontWeight.w800,
                 ),
               ),
             ],
           ),
           ElevatedButton(
-              style: ButtonStyle(
-                backgroundColor: Theme.of(context).primaryColor,
+              style: ElevatedButton.styleFrom(
+                primary: Theme.of(context).primaryColor,
+                minimumSize: Size(
+                  MediaQuery.of(context).size.width * .3,
+                  MediaQuery.of(context).size.height * .06,
+                ),
+                shape: new RoundedRectangleBorder(
+                  borderRadius: new BorderRadius.circular(15.0),
+                ),
               ),
               onPressed: () {},
               child: Row(
-                children: [Icon(Icons.calendar_today), Text("Select Date")],
+                // mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Icon(
+                    Icons.calendar_today_outlined,
+                    size: 20,
+                  ),
+                  SizedBox(
+                    width: 5,
+                  ),
+                  Text("Select Date")
+                ],
               )),
         ],
       ),
