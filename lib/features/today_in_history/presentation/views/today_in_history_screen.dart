@@ -69,7 +69,7 @@ class _TodayInHistoryViewState extends State<TodayInHistoryView> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
-                      Text(DateFormat("EEE").format(selectableDates[index]),s)
+                      Text(DateFormat("EEE").format(selectableDates[index]),style: TextStyle(),)
                     ],
                   ),
                 ),
