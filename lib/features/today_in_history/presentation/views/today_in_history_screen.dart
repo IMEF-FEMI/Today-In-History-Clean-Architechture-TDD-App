@@ -82,7 +82,7 @@ class _TodayInHistoryViewState extends State<TodayInHistoryView> {
                         style: TextStyle(
                             fontWeight: FontWeight.w800,
                             color: Theme.of(context).primaryColor,
-                            fontSize: 25),
+                            fontSize: 22),
                       )
                     ],
                   ),
