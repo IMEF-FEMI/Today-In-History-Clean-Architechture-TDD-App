@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
       
         primaryColor: Color(0xff3c3395),
       ),
-      home: TodayInHistory,
+      home: TodayInHistoryPage(),
     );
   }
 }
