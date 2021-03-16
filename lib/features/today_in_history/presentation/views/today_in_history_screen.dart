@@ -30,9 +30,9 @@ class _TodayInHistoryViewState extends State<TodayInHistoryView> {
         body: Column(
           children: [
             buildSelectableDateCards(),
-            Center(
-              child: Text("Today in History"),
-            ),
+            // Center(
+            //   child: Text("Today in History"),
+            // ),
           ],
         ),
       ),
