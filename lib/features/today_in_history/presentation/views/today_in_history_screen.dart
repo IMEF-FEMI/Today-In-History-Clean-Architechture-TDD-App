@@ -42,7 +42,7 @@ class _TodayInHistoryViewState extends State<TodayInHistoryView> {
   Widget buildSelectableDateCards() {
     return Container(
       height: MediaQuery.of(context).size.height * .1,
-      width: MediaQuery.of(context).size.width * .1,
+      width: MediaQuery.of(context).size.width ,
       
       child: ListView.builder(
         itemCount: selectableDates.length,
