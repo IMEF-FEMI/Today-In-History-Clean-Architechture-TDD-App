@@ -29,6 +29,7 @@ class _TodayInHistoryViewState extends State<TodayInHistoryView> {
       child: Scaffold(
         body: Column(
           children: [
+            build
             Center(
               child: Text("Today in History"),
             ),
