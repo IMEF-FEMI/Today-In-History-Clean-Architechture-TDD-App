@@ -71,7 +71,7 @@ class _TodayInHistoryViewState extends State<TodayInHistoryView> {
                     children: [
                       Text(
                         DateFormat("EEE").format(selectableDates[index]),
-                        style: TextStyle(fontWeight: FontWeight.w600),
+                        style: TextStyle(fontWeight: FontWeight.w600, color: Theme.of(context).primaryColor),
                       )
                     ],
                   ),
