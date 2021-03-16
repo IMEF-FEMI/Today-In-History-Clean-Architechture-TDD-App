@@ -79,8 +79,9 @@ class _TodayInHistoryViewState extends State<TodayInHistoryView> {
                       Text(
                         DateFormat("dd").format(selectableDates[index]),
                         style: TextStyle(
-                          fontWeight: FontWeight.w600,
+                          fontWeight: FontWeight.w800,
                           color: Theme.of(context).primaryColor,
+                          font
                         ),
                       )
                     ],
