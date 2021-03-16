@@ -6,12 +6,12 @@ class TodayInHistoryView extends StatefulWidget {
 }
 
 class _TodayInHistoryViewState extends State<TodayInHistoryView> {
-  DateTime today = DateTime.now()
+  DateTime today = DateTime.now();
   @override
-    void initState() {
-      super.initState();
+  void initState() {
+    super.initState();
+  }
 
-    }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
