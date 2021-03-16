@@ -47,7 +47,7 @@ class _TodayInHistoryViewState extends State<TodayInHistoryView> {
         width: MediaQuery.of(context).size.width,
         child: ListView.builder(
           itemCount: selectableDates.length,
-          scrollDirection: ScrollD,
+          scrollDirection: Axis.,
           itemBuilder: (context, index) {
             return Padding(
               padding: const EdgeInsets.symmetric(horizontal: 20.0),
