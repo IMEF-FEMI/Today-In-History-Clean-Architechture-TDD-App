@@ -67,7 +67,7 @@ class _TodayInHistoryViewState extends State<TodayInHistoryView> {
                   decoration: BoxDecoration(
                       border: Border.all(
                         color: Colors.grey.withOpacity(.2),
-                        // red as border color
+                        
                       ),
                       borderRadius: BorderRadius.circular(20)),
                   child: Column(
