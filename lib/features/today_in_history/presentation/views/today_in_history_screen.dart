@@ -13,7 +13,9 @@ class _TodayInHistoryViewState extends State<TodayInHistoryView> {
   void initState() {
     super.initState();
     selectableDates = [
-      today.subtract(Duration(days: 7))
+      today.subtract(
+        Duration(days: 3),
+      )
     ];
   }
 
