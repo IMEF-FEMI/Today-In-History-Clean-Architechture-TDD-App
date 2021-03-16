@@ -56,7 +56,11 @@ class _TodayInHistoryViewState extends State<TodayInHistoryView> {
               child: InkWell(
                 borderRadius: BorderRadius.circular(20),
                 splashColor: Theme.of(context).primaryColor.withOpacity(.4),
-                onTap: () {},
+                onTap: () {
+                  setState(() {
+                                      sele
+                                    });
+                },
                 child: Container(
                   height: MediaQuery.of(context).size.height * .1,
                   width: MediaQuery.of(context).size.width * .15,
