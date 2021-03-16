@@ -30,20 +30,30 @@ class _TodayInHistoryViewState extends State<TodayInHistoryView> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
+        // appBar: AppBar(
+        //   title: Text("Today in History"),
+        //   centerTitle: true,
+        // ),
         body: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
-            SizedBox(height: 20),
+            // SizedBox(height: 20),
 
-            Text(
-              "Today in History",
-              style: TextStyle(fontWeight: ),
-            ),
+            // Text(
+            //   "Today in History",
+            //   style: TextStyle(
+            //     fontSize: 20,
+            //     fontWeight: FontWeight.w800,
+            //   ),
+            // ),
+            // SizedBox(height: 50),
+
+            SizedBox(height: 10),
+            buildSelectableDateCards(),
             SizedBox(height: 50),
 
             buildDateInfo(),
-            SizedBox(height: 10),
-            buildSelectableDateCards(),
+
             // Center(
             //   child: Text("Today in History"),
             // ),
@@ -55,7 +65,7 @@ class _TodayInHistoryViewState extends State<TodayInHistoryView> {
 
   Widget buildDateInfo() {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 10),
+      padding: const EdgeInsets.symmetric(horizontal: 2),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
@@ -66,10 +76,11 @@ class _TodayInHistoryViewState extends State<TodayInHistoryView> {
                 DateFormat("MMMM dd").format(selectedDate),
                 textAlign: TextAlign.start,
                 style: TextStyle(
-                    fontSize: 20,
+                    fontSize: 15,
                     fontWeight: FontWeight.w400,
                     color: Color(0xffb0afad)),
               ),
+              SizedBox(height: 10),
               Text(
                 "Date",
                 textAlign: TextAlign.start,
