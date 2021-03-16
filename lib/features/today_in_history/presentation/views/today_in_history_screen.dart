@@ -53,7 +53,7 @@ class _TodayInHistoryViewState extends State<TodayInHistoryView> {
               padding: const EdgeInsets.symmetric(horizontal: 2.0),
               child: Container(
                 height: MediaQuery.of(context).size.height * .1,
-                width: MediaQuery.of(context).size.width * .3,
+                width: MediaQuery.of(context).size.width * .2,
                 color: Colors.red,
               ),
             );
