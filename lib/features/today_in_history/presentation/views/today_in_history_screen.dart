@@ -45,7 +45,7 @@ class _TodayInHistoryViewState extends State<TodayInHistoryView> {
       itemBuilder: (context, index) {
         return Container(
           height: MediaQuery.of(context).size.height * .1,
-          height: MediaQuery.of(context).size.height * .1,
+          width: MediaQuery.of(context).size.width * .1,
         );
       },
     );
