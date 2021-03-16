@@ -64,11 +64,12 @@ class _TodayInHistoryViewState extends State<TodayInHistoryView> {
                 child: Container(
                   height: MediaQuery.of(context).size.height * .1,
                   width: MediaQuery.of(context).size.width * .15,
-                  color: selectedDate == selectableDates[index] ? Theme.of(context).primaryColor,
+                  color: selectedDate == selectableDates[index]
+                      ? Theme.of(context).primaryColor
+                      : Colors.white,
                   decoration: BoxDecoration(
                       border: Border.all(
                         color: Colors.grey.withOpacity(.2),
-                        
                       ),
                       borderRadius: BorderRadius.circular(20)),
                   child: Column(
