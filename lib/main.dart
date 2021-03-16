@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-i
+import 'di';
 
 void main() {
   runApp(MyApp());
