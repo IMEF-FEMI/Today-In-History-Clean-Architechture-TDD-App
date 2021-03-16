@@ -56,7 +56,11 @@ class _TodayInHistoryViewState extends State<TodayInHistoryView> {
                 width: MediaQuery.of(context).size.width * .17,
                 color: Colors.red,
                 child: Text("${index + 1}"),
-                decoration: BoxDecoration(border: ),
+                decoration: BoxDecoration(
+                border:  Border.all(
+                    color: Colors.red, // red as border color
+                  ),
+                ),
               ),
             );
           },
