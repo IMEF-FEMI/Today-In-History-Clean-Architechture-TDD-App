@@ -76,13 +76,13 @@ class _TodayInHistoryViewState extends State<TodayInHistoryView> {
                           color: Theme.of(context).primaryColor,
                         ),
                       ),
-                      SizedBox(height: 5,);
+                      SizedBox(height: 5),
                       Text(
                         DateFormat("dd").format(selectableDates[index]),
                         style: TextStyle(
                             fontWeight: FontWeight.w800,
                             color: Theme.of(context).primaryColor,
-                            fontSize: 20),
+                            fontSize: 25),
                       )
                     ],
                   ),
