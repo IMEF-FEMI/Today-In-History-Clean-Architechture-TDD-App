@@ -31,13 +31,58 @@ class _TodayInHistoryViewState extends State<TodayInHistoryView> {
     return SafeArea(
       child: Scaffold(
         body: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
           children: [
+            SizedBox(height: 100),
+
+            buildDateInfo(),
+            SizedBox(height: 10),
             buildSelectableDateCards(),
             // Center(
             //   child: Text("Today in History"),
             // ),
           ],
         ),
+      ),
+    );
+  }
+
+  Widget buildDateInfo() {
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 20),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                DateFormat("MMMM dd").format(selectedDate),
+                textAlign: TextAlign.start,
+                style: TextStyle(
+                    fontSize: 20,
+                    fontWeight: FontWeight.w400,
+                    color: Color(0xffb0afad)),
+              ),
+              Text(
+                "Date",
+                textAlign: TextAlign.start,
+                style: TextStyle(
+                  fontSize: 30,
+                  fontWeight: FontWeight.w800,
+                ),
+              ),
+            ],
+          ),
+          ElevatedButton(
+              style: ButtonStyle(
+                backgroundColor: Theme.of(context).primaryColor,
+              ),
+              onPressed: () {},
+              child: Row(
+                children: [Icon(Icons.calendar_today), Text("Select Date")],
+              )),
+        ],
       ),
     );
   }
