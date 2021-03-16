@@ -58,7 +58,8 @@ class _TodayInHistoryViewState extends State<TodayInHistoryView> {
                 decoration: BoxDecoration(
                   border: Border.all(
                     color:
-                        Theme.of(context).primaryColor, // red as border color
+                        Theme.of(context).primaryColor, 
+                        radi// red as border color
                   ),
                 ),
               ),
