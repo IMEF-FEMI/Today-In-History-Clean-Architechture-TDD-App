@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
 
 class TodayInHistoryView extends StatefulWidget {
   @override
@@ -64,7 +65,7 @@ class _TodayInHistoryViewState extends State<TodayInHistoryView> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                      Text(DateFormat("EEE")
+                      Text(DateFormat("EEE").format(date)
                       )
                   ],
                 ),
