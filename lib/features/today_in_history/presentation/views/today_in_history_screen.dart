@@ -58,7 +58,7 @@ class _TodayInHistoryViewState extends State<TodayInHistoryView> {
                 splashColor: Theme.of(context).primaryColor.withOpacity(.4),
                 onTap: () {
                   setState(() {
-                                      sele
+                                      selectedDate = 
                                     });
                 },
                 child: Container(
