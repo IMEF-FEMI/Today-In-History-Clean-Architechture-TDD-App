@@ -3,7 +3,7 @@ import 'package:today_in_history/features/today_in_history/presentation/views/to
 import 'injection_container.dart' as di;
 
 void main() async {
-await  WidgetsFlutterBinding.ensureInitialized();
+  WidgetsFlutterBinding.ensureInitialized();
   di.init();
   runApp(MyApp());
 }
