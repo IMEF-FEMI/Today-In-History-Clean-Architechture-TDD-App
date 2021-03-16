@@ -80,7 +80,9 @@ class _TodayInHistoryViewState extends State<TodayInHistoryView> {
                         DateFormat("EEE").format(selectableDates[index]),
                         style: TextStyle(
                           fontWeight: FontWeight.w600,
-                          color:selectedDate == selectableDates[index]? Colors.white:Theme.of(context).primaryColor,
+                          color: selectedDate == selectableDates[index]
+                              ? Colors.white
+                              : Theme.of(context).primaryColor,
                           fontSize: 10,
                         ),
                       ),
@@ -89,7 +91,9 @@ class _TodayInHistoryViewState extends State<TodayInHistoryView> {
                         DateFormat("dd").format(selectableDates[index]),
                         style: TextStyle(
                           fontWeight: FontWeight.w800,
-                          color: Theme.of(context).primaryColor,
+                          color: selectedDate == selectableDates[index]
+                              ? Colors.white
+                              : TTheme.of(context).primaryColor,
                           fontSize: 22,
                         ),
                       )
