@@ -10,7 +10,7 @@ class _TodayInHistoryViewState extends State<TodayInHistoryView> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: Text("Main Screen"),
+        child: Text("Today in History"),
       ),
     );
   }
