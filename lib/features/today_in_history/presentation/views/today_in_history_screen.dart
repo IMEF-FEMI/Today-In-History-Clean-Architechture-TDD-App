@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-class Today extends StatefulWidget {
+class TodayInHistoryView extends StatefulWidget {
   @override
-  _TodayState createState() => _TodayState();
+  _TodayInHistoryViewState createState() => _TodayInHistoryViewState();
 }
 
-class _TodayState extends State<Today> {
+class _TodayInHistoryViewState extends State<TodayInHistoryView> {
   @override
   Widget build(BuildContext context) {
     return Container(
