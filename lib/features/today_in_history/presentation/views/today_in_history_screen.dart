@@ -97,7 +97,18 @@ class _TodayInHistoryViewState extends State<TodayInHistoryView> {
                               : Theme.of(context).primaryColor,
                           fontSize: 22,
                         ),
-                      )
+                      SizedBox(height: 5),
+                      ),
+                      Text(
+                        DateFormat("EEE").format(selectableDates[index]),
+                        style: TextStyle(
+                          fontWeight: FontWeight.w600,
+                          color: selectedDate == selectableDates[index]
+                              ? Colors.white
+                              : Theme.of(context).primaryColor,
+                          fontSize: 10,
+                        ),
+                      ),
                     ],
                   ),
                 ),
