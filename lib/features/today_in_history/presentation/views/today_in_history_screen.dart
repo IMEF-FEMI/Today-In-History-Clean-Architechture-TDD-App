@@ -29,7 +29,7 @@ class _TodayInHistoryViewState extends State<TodayInHistoryView> {
       child: Scaffold(
         body: Column(
           children: [
-            buildSelectable
+            buildSelectableDateCards(),
             Center(
               child: Text("Today in History"),
             ),
