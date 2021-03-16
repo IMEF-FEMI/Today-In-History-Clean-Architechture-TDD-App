@@ -3,6 +3,7 @@ import 'package:today_in_history/features/today_in_history/presentation/views/to
 import 'injection_container.dart' as di;
 
 void main() async {
+await  WidgetsFlutterBinding.ensureInitialized();
   di.init();
   runApp(MyApp());
 }
@@ -14,7 +15,6 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-      
         primaryColor: Color(0xff3c3395),
       ),
       home: TodayInHistoryView(),
