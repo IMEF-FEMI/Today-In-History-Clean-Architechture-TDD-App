@@ -7,7 +7,7 @@ class TodayInHistoryView extends StatefulWidget {
 
 class _TodayInHistoryViewState extends State<TodayInHistoryView> {
   DateTime today = DateTime.now();
-  List<DateTime>
+  List<DateTime> selec
   @override
   void initState() {
     super.initState();
