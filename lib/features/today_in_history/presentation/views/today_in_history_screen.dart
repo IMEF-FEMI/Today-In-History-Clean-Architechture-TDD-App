@@ -49,7 +49,7 @@ class _TodayInHistoryViewState extends State<TodayInHistoryView> {
           itemCount: selectableDates.length,
           itemBuilder: (context, index) {
             return Padding(
-              padding: const EdgeInsets.symmetric( 8.0),
+              padding: const EdgeInsets.symmetric(horizontal: 20.0),
               child: Container(
                 height: MediaQuery.of(context).size.height * .1,
                 width: MediaQuery.of(context).size.width * .1,
