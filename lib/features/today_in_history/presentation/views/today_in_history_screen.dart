@@ -60,6 +60,9 @@ class _TodayInHistoryViewState extends State<TodayInHistoryView> {
                       // red as border color
                     ),
                     borderRadius: BorderRadius.circular(20)),
+                child: Column(
+                  children: [],
+                ),
               ),
             );
           },
