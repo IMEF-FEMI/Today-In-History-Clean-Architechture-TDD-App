@@ -30,33 +30,20 @@ class _TodayInHistoryViewState extends State<TodayInHistoryView> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        // appBar: AppBar(
-        //   title: Text("Today in History"),
-        //   centerTitle: true,
-        // ),
+        appBar: AppBar(
+          title: Text("Today in History"),
+          centerTitle: true,
+          backgroundColor: Color(0xff3c3395),
+        ),
         body: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
-            // SizedBox(height: 20),
-
-            // Text(
-            //   "Today in History",
-            //   style: TextStyle(
-            //     fontSize: 20,
-            //     fontWeight: FontWeight.w800,
-            //   ),
-            // ),
-            // SizedBox(height: 50),
-
             SizedBox(height: 10),
             buildSelectableDateCards(),
             SizedBox(height: 50),
-
             buildDateInfo(),
-
-            // Center(
-            //   child: Text("Today in History"),
-            // ),
+            SizedBox(height: 20),
+            Divider(),
           ],
         ),
       ),
@@ -65,7 +52,7 @@ class _TodayInHistoryViewState extends State<TodayInHistoryView> {
 
   Widget buildDateInfo() {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 2),
+      padding: const EdgeInsets.symmetric(horizontal: 20),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
@@ -76,16 +63,16 @@ class _TodayInHistoryViewState extends State<TodayInHistoryView> {
                 DateFormat("MMMM dd").format(selectedDate),
                 textAlign: TextAlign.start,
                 style: TextStyle(
-                    fontSize: 15,
-                    fontWeight: FontWeight.w400,
-                    color: Color(0xffb0afad)),
+                  fontWeight: FontWeight.w400,
+                  color: Color(0xffb0afad),
+                ),
               ),
-              SizedBox(height: 10),
+              SizedBox(height: 5),
               Text(
                 "Date",
                 textAlign: TextAlign.start,
                 style: TextStyle(
-                  fontSize: 25,
+                  fontSize: 23,
                   fontWeight: FontWeight.w800,
                 ),
               ),
