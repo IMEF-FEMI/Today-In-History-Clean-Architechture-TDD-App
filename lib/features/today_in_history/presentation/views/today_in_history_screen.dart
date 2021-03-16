@@ -58,8 +58,8 @@ class _TodayInHistoryViewState extends State<TodayInHistoryView> {
                 splashColor: Theme.of(context).primaryColor.withOpacity(.4),
                 onTap: () {
                   setState(() {
-                                      selectedDate = 
-                                    });
+                    selectedDate = selectableDates[index];
+                  });
                 },
                 child: Container(
                   height: MediaQuery.of(context).size.height * .1,
