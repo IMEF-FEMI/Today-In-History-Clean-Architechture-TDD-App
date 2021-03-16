@@ -41,8 +41,10 @@ class _TodayInHistoryViewState extends State<TodayInHistoryView> {
 
   Widget buildSelectableDateCards() {
     return ListView.builder(
-      itemCount: ,
-      itemBuilder: (context) {},
+      itemCount: selectableDates.len,
+      itemBuilder: (context) {
+
+      },
     );
   }
 }
