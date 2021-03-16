@@ -21,7 +21,6 @@ class _TodayInHistoryViewState extends State<TodayInHistoryView> {
       today.add(Duration(days: 2)),
       today.add(Duration(days: 3)),
     ];
-    print(selectableDates);
   }
 
   @override
