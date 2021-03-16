@@ -22,6 +22,7 @@ Future<void> init() async {
     () => TodayInHistoryBloc(
       date: serviceLocator(),
       today: serviceLocator(),
+      dateBloc: serviceLocator(),
     ),
   );
 

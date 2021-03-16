@@ -52,6 +52,7 @@ class _TodayInHistoryViewState extends State<TodayInHistoryView> {
                   DateInfoView(),
                   SizedBox(height: 20),
                   Divider(),
+                  
                 ],
               ),
             ),

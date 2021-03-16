@@ -157,4 +157,43 @@ void main() {
       await untilCalled(mockGetEventsForToday(any));
     });
   });
+
+  group('date changer bloc ', () {
+    final tEventsForDay = TodayEventsModel(
+      date: "March 12",
+      url: "https://wikipedia.org/wiki/March_12",
+      events: <Event>[
+        Event(
+          link: "https://wikipedia.org/wiki/Vitiges",
+          text:
+              "Vitiges, king of the Ostrogoths ends his siege of Rome and retreats to Ravenna, leaving the city in the hands of the victorious Byzantine general",
+          year: "538",
+        ),
+        Event(
+          link: "https://wikipedia.org/wiki/Ignatius_of_Loyola",
+          text:
+              "Ignatius of Loyola and Francis Xavier, founders of the Society of Jesus, are canonized by the Roman Catholic Church.",
+          year: "1622",
+        ),
+      ],
+    );
+
+    test(
+        'Should fetch TIH for specifi day as soon as Date selector bloc makes changes',
+        () async {
+      // arrange
+      when(mockGetEventsForDate(any))
+          .thenAnswer((_) async => Right(tEventsForDay));
+      // act
+
+      final expected = [
+        // Empty(),
+        Loading(),
+        Loaded(eventsModel: tEventsForDay),
+      ];
+
+      expectLater(bloc, emitsInOrder(expected));
+      dateSelectorBloc.add(ChangeSelectedDate(selectedDate: DateTime.now()));
+    });
+  });
 }

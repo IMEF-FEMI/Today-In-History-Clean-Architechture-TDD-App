@@ -41,12 +41,12 @@ class TodayInHistoryBloc
       print("--------");
       print("-----");
       print("--");
-      print("NEw date has been selected");
+      print("New date has been selected");
       add(GetTIHForSpecificDay(
           day: dateSelectorState.selectedDate.day,
           month: dateSelectorState.selectedDate.month));
     });
-    ;
+    
   }
 
   @override
