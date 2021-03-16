@@ -9,7 +9,7 @@ part 'date_selector_state.dart';
 
 class DateSelectorBloc extends Bloc<DateSelectorEvent, DateSelectorState> {
   DateSelectorBloc()
-      : super(DateSelectorInitial(
+      : super(DateSelectorState(
           selectedDate: DateTime.now(),
         ));
 
@@ -17,7 +17,8 @@ class DateSelectorBloc extends Bloc<DateSelectorEvent, DateSelectorState> {
   Stream<DateSelectorState> mapEventToState(
     DateSelectorEvent event,
   ) async* {
-    // TODO: implement mapEventToState
+    if (event is ChangeSelectedDate) {
+      yield DateSelectorState(selectedDate: event.selectedDate);
+    }
   }
-
 }

@@ -28,6 +28,9 @@ class _TodayInHistoryViewState extends State<TodayInHistoryView> {
 
   @override
   Widget build(BuildContext context) {
+
+
+    
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(

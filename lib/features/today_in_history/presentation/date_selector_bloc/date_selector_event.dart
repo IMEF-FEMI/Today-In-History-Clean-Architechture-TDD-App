@@ -6,3 +6,10 @@ abstract class DateSelectorEvent extends Equatable {
   @override
   List<Object> get props => [];
 }
+
+class ChangeSelectedDate extends DateSelectorEvent {
+  final DateTime selectedDate;
+
+  ChangeSelectedDate({@required this.selectedDate});
+
+}
