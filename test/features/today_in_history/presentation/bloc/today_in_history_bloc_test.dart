@@ -94,8 +94,6 @@ void main() {
   });
 
   group('get TIH for today', () {
-    final tMonth = 2;
-    final tDay = 14;
     final tEventsForDay = TodayEventsModel(
       date: "March 12",
       url: "https://wikipedia.org/wiki/March_12",
