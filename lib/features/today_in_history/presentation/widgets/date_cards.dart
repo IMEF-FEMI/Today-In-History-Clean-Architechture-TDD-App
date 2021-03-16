@@ -64,8 +64,10 @@ class _DateCardsState extends State<DateCards> {
                       border: Border.all(
                         color: Colors.grey.withOpacity(.2),
                       ),
-                      color: dateSelectorBloc.state.selectedDate ==
-                              selectableDates[index]
+                      color: (dateSelectorBloc.state.selectedDate.month ==
+                                  selectableDates[index].month &&
+                              (selectableDates[index].day ==
+                                  dateSelectorBloc.state.selectedDate.day))
                           ? Theme.of(context).primaryColor
                           : Colors.white,
                       borderRadius: BorderRadius.circular(20)),
@@ -77,8 +79,10 @@ class _DateCardsState extends State<DateCards> {
                         DateFormat("EEE").format(selectableDates[index]),
                         style: TextStyle(
                           fontWeight: FontWeight.w600,
-                          color: dateSelectorBloc.state.selectedDate ==
-                                  selectableDates[index]
+                          color: (dateSelectorBloc.state.selectedDate.month ==
+                                      selectableDates[index].month &&
+                                  (selectableDates[index].day ==
+                                      dateSelectorBloc.state.selectedDate.day))
                               ? Colors.white
                               : Theme.of(context).primaryColor,
                           fontSize: 10,
@@ -89,8 +93,10 @@ class _DateCardsState extends State<DateCards> {
                         DateFormat("dd").format(selectableDates[index]),
                         style: TextStyle(
                           fontWeight: FontWeight.w800,
-                          color: dateSelectorBloc.state.selectedDate ==
-                                  selectableDates[index]
+                          color: (dateSelectorBloc.state.selectedDate.month ==
+                                      selectableDates[index].month &&
+                                  (selectableDates[index].day ==
+                                      dateSelectorBloc.state.selectedDate.day))
                               ? Colors.white
                               : Theme.of(context).primaryColor,
                           fontSize: 22,
@@ -101,8 +107,10 @@ class _DateCardsState extends State<DateCards> {
                         DateFormat("MMM").format(selectableDates[index]),
                         style: TextStyle(
                           fontWeight: FontWeight.w600,
-                          color: dateSelectorBloc.state.selectedDate ==
-                                  selectableDates[index]
+                          color: (dateSelectorBloc.state.selectedDate.month ==
+                                      selectableDates[index].month &&
+                                  (selectableDates[index].day ==
+                                      dateSelectorBloc.state.selectedDate.day))
                               ? Colors.white
                               : Theme.of(context).primaryColor,
                           fontSize: 10,

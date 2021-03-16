@@ -63,7 +63,19 @@ class _DateInfoViewState extends State<DateInfoView> {
                   borderRadius: new BorderRadius.circular(15.0),
                 ),
               ),
-              onPressed: () {},
+              onPressed: () async {
+                final result = await showDatePicker(
+                  context: context,
+                  initialDate: DateTime.now(),
+                  firstDate: DateTime(2021),
+                  lastDate: DateTime(2022),
+                );
+                if (result != null) {
+                  dateSelectorBloc.add(ChangeSelectedDate(
+                    selectedDate: result,
+                  ));
+                }
+              },
               child: Row(
                 // mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
