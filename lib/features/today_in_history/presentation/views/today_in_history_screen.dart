@@ -93,7 +93,7 @@ class _TodayInHistoryViewState extends State<TodayInHistoryView> {
                           fontWeight: FontWeight.w800,
                           color: selectedDate == selectableDates[index]
                               ? Colors.white
-                              : TTheme.of(context).primaryColor,
+                              : Theme.of(context).primaryColor,
                           fontSize: 22,
                         ),
                       )
