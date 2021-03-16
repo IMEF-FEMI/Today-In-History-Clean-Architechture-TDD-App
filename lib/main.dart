@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'injection_container.dart';
+import 'injection_container.dart' as di;
 
-void main()asy {
+void main()async {
+
   runApp(MyApp());
 }
 
