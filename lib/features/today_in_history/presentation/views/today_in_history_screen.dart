@@ -12,7 +12,7 @@ class _TodayInHistoryViewState extends State<TodayInHistoryView> {
   @override
   void initState() {
     super.initState();
-    selectableDates = List.from(DateTimeRange());
+    selectableDates = List.from(DateTimeRange(start: ));
   }
 
   @override
