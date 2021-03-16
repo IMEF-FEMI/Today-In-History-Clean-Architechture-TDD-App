@@ -18,7 +18,8 @@ class _TodayInHistoryViewState extends State<TodayInHistoryView> {
       today.subtract(Duration(days: 1)),
       today,
       today.add(Duration(days: 1)),
-
+      today.add(Duration(days: 2)),
+      today.add(Duration(days: 3)),
     ];
   }
 
