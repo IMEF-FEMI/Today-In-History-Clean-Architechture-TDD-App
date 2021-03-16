@@ -2,7 +2,6 @@ import 'package:dartz/dartz.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
 import 'package:today_in_history/core/error/failures.dart';
-import 'package:today_in_history/core/usecase/usecase.dart';
 import 'package:today_in_history/features/today_in_history/data/models/today_events_model.dart';
 import 'package:today_in_history/features/today_in_history/domain/entities/today_events.dart';
 import 'package:today_in_history/features/today_in_history/domain/usecases/get_events_for_date.dart';
