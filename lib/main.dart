@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:today_in_history/features/today_in_history/presentation/views/today_in_history_screen.dart';
 import 'injection_container.dart' as di;
 
 void main() async {
@@ -16,7 +17,7 @@ class MyApp extends StatelessWidget {
       
         primaryColor: Color(0xff3c3395),
       ),
-      home: TodayInHistoryPage(),
+      home: TodayInHistoryView(),
     );
   }
 }
