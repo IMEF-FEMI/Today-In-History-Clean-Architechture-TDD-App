@@ -43,7 +43,7 @@ class _TodayInHistoryViewState extends State<TodayInHistoryView> {
     return ListView.builder(
       itemCount: selectableDates.length,
       itemBuilder: (context, index) {
-        return Container();
+        return Container(height: MediaQuery,);
       },
     );
   }
