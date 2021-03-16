@@ -62,7 +62,10 @@ class _TodayInHistoryViewState extends State<TodayInHistoryView> {
                     borderRadius: BorderRadius.circular(20)),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
-                  crossAxisAlignment: CrossAxisAlignment.center,                  children: [],
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    
+                  ],
                 ),
               ),
             );
