@@ -58,7 +58,7 @@ class _TodayInHistoryViewState extends State<TodayInHistoryView> {
                 child: Text("${index + 1}"),
                 decoration: BoxDecoration(
                 border:  Border.all(
-                    color: Colors.red, // red as border color
+                    color:Theme.of(context), // red as border color
                   ),
                 ),
               ),
