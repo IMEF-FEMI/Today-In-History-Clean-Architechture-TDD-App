@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primaryColor: Color(0xff3c3395),
+        primaryColor: Color(0xff09090f),
       ),
       home: TodayInHistoryView(),
     );
