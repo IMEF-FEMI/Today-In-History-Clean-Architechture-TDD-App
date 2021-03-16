@@ -8,7 +8,7 @@ class TodayInHistoryView extends StatefulWidget {
 class _TodayInHistoryViewState extends State<TodayInHistoryView> {
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return Scaffold(
       
     );
   }
