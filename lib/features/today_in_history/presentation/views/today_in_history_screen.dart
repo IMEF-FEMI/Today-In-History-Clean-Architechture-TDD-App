@@ -52,7 +52,8 @@ class _TodayInHistoryViewState extends State<TodayInHistoryView> {
           itemBuilder: (context, index) {
             return Padding(
               padding: const EdgeInsets.symmetric(horizontal: 5.0),
-              child: widget(
+              child: InkWell(
+                radius: 20,
                 child: Container(
                   height: MediaQuery.of(context).size.height * .1,
                   width: MediaQuery.of(context).size.width * .15,
