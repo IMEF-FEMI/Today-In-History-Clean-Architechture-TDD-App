@@ -9,7 +9,9 @@ class _TodayInHistoryViewState extends State<TodayInHistoryView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(child: Text(""),),
+      body: Center(
+        child: Text("Main Screen"),
+      ),
     );
   }
 }
