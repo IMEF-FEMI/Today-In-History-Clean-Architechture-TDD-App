@@ -4,6 +4,7 @@ import 'package:intl/intl.dart';
 import 'package:today_in_history/features/today_in_history/presentation/date_selector_bloc/date_selector_bloc.dart';
 import 'package:today_in_history/features/today_in_history/presentation/widgets/date_cards.dart';
 import 'package:today_in_history/features/today_in_history/presentation/widgets/date_info_view.dart';
+import 'package:today_in_history/features/today_in_history/presentation/widgets/history_views.dart';
 import 'package:today_in_history/injection_container.dart';
 
 class TodayInHistoryView extends StatefulWidget {
@@ -52,7 +53,7 @@ class _TodayInHistoryViewState extends State<TodayInHistoryView> {
                   DateInfoView(),
                   SizedBox(height: 20),
                   Divider(),
-                  
+                  HistoryListView(),
                 ],
               ),
             ),
