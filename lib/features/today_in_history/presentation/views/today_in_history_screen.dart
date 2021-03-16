@@ -48,6 +48,7 @@ class _TodayInHistoryViewState extends State<TodayInHistoryView> {
         child: ListView.builder(
           itemCount: selectableDates.length,
           scrollDirection: Axis.horizontal,
+          
           itemBuilder: (context, index) {
             return Padding(
               padding: const EdgeInsets.symmetric(horizontal: 5.0),
@@ -64,7 +65,7 @@ class _TodayInHistoryViewState extends State<TodayInHistoryView> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    
+
                   ],
                 ),
               ),
