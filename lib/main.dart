@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
       
         primaryColor: Color(0xff3c3395),
       ),
-      home: MyHomePage(title: 'Flutter Demo Home Page'),
+      home: TodayInHistory,
     );
   }
 }
