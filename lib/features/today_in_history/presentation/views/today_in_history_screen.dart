@@ -26,8 +26,12 @@ class _TodayInHistoryViewState extends State<TodayInHistoryView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-        child: Text("Today in History"),
+      body: Column(
+        children: [
+          Center(
+            child: Text("Today in History"),
+          ),
+        ],
       ),
     );
   }
