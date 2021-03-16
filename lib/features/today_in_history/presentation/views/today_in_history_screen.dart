@@ -55,7 +55,7 @@ class _TodayInHistoryViewState extends State<TodayInHistoryView> {
                 height: MediaQuery.of(context).size.height * .1,
                 width: MediaQuery.of(context).size.width * .2,
                 color: Colors.red,
-                child: Text(""),
+                child: Text("${index + 1}"),
               ),
             );
           },
