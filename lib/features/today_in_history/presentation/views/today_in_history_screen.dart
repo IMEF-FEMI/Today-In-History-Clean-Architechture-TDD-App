@@ -53,8 +53,7 @@ class _TodayInHistoryViewState extends State<TodayInHistoryView> {
             return Padding(
               padding: const EdgeInsets.symmetric(horizontal: 5.0),
               child: InkWell(
-                radius: 20,
-                borderRadius:BorderRadius.circular(20)),
+                borderRadius: BorderRadius.circular(20),
                 onTap: () {},
                 child: Container(
                   height: MediaQuery.of(context).size.height * .1,
