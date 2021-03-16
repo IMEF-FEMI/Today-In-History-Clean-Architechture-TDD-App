@@ -59,7 +59,7 @@ class _TodayInHistoryViewState extends State<TodayInHistoryView> {
                       color: Theme.of(context).primaryColor,
                       // red as border color
                     ),
-                    borderRadius: BorderRadius.circular(25)),
+                    borderRadius: BorderRadius.circular(20)),
               ),
             );
           },
