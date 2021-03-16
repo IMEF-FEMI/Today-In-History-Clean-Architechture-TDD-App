@@ -1,0 +1,17 @@
+-------------------- Auto-Git Log --------------------
+		Tue Mar 16 2021 15:29:32 GMT+0100 (West Africa Standard Time)
+------------------------------------------------------
+
+Modified files:
+* lib/features/today_in_history/presentation/widgets/date_cards.dart
+* lib/features/today_in_history/presentation/widgets/date_info_view.dart
+
+
+Created files:
+* .autogit/logs/log-16-2-2021-14-59-26.txt
+
+
+Deleted files:
+
+
+Renamed files:

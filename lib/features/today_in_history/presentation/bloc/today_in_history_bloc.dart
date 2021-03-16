@@ -9,6 +9,7 @@ import 'package:today_in_history/features/today_in_history/domain/entities/today
 import 'package:today_in_history/features/today_in_history/domain/usecases/get_events_for_date.dart';
 import 'package:today_in_history/features/today_in_history/domain/usecases/get_events_for_today.dart';
 import 'package:dartz/dartz.dart';
+import 'package:today_in_history/features/today_in_history/presentation/date_selector_bloc/date_selector_bloc.dart';
 
 part 'today_in_history_event.dart';
 part 'today_in_history_state.dart';
@@ -18,18 +19,41 @@ const String CACHE_FAILURE_MESSAGE = "Cache Failure";
 
 class TodayInHistoryBloc
     extends Bloc<TodayInHistoryEvent, TodayInHistoryState> {
-  final GetEventsForDate getEventsForDate;
-  final GetEventsForToday getEventsForToday;
+  GetEventsForDate getEventsForDate;
+  GetEventsForToday getEventsForToday;
+  DateSelectorBloc dateSelectorBloc;
+  StreamSubscription dateSelectorSubscription;
 
-  TodayInHistoryBloc({
-    @required GetEventsForDate date,
-    @required GetEventsForToday today,
-  })  : assert(date != null),
-        assert(today != null),
-        getEventsForDate = date,
-        getEventsForToday = today,
-        super(Empty());
+  TodayInHistoryBloc(
+      {@required GetEventsForDate date,
+      @required GetEventsForToday today,
+      @required DateSelectorBloc dateBloc})
+      : super(Empty()) {
+    assert(date != null);
+    assert(today != null);
+    assert(dateBloc != null);
+    getEventsForDate = date;
+    getEventsForToday = today;
+    dateSelectorBloc = dateBloc;
+    dateSelectorSubscription = dateBloc.listen((dateSelectorState) {
+      print("---------------");
+      print("-----------");
+      print("--------");
+      print("-----");
+      print("--");
+      print("NEw date has been selected");
+      add(GetTIHForSpecificDay(
+          day: dateSelectorState.selectedDate.day,
+          month: dateSelectorState.selectedDate.month));
+    });
+    ;
+  }
 
+  @override
+  Future<void> close() {
+    dateSelectorSubscription.cancel();
+    return super.close();
+  }
   @override
   Stream<TodayInHistoryState> mapEventToState(
     TodayInHistoryEvent event,
@@ -40,7 +64,7 @@ class TodayInHistoryBloc
         month: event.month,
         day: event.day,
       ));
-     
+
       yield* _eitherLoadedOrErrorState(failureOrEvent);
     } else if (event is GetTIHForToday) {
       yield Loading();

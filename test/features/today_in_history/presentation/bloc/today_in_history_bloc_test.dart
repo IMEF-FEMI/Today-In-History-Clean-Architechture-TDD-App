@@ -7,6 +7,7 @@ import 'package:today_in_history/features/today_in_history/domain/entities/today
 import 'package:today_in_history/features/today_in_history/domain/usecases/get_events_for_date.dart';
 import 'package:today_in_history/features/today_in_history/domain/usecases/get_events_for_today.dart';
 import 'package:today_in_history/features/today_in_history/presentation/bloc/today_in_history_bloc.dart';
+import 'package:today_in_history/features/today_in_history/presentation/date_selector_bloc/date_selector_bloc.dart';
 
 class MockGetEventsForDate extends Mock implements GetEventsForDate {}
 
@@ -16,14 +17,17 @@ void main() {
   TodayInHistoryBloc bloc;
   MockGetEventsForDate mockGetEventsForDate;
   MockGetEventsForToday mockGetEventsForToday;
+  DateSelectorBloc dateSelectorBloc;
 
   setUp(() {
     mockGetEventsForDate = MockGetEventsForDate();
     mockGetEventsForToday = MockGetEventsForToday();
+    dateSelectorBloc = DateSelectorBloc();
 
     bloc = TodayInHistoryBloc(
       date: mockGetEventsForDate,
       today: mockGetEventsForToday,
+      dateBloc: dateSelectorBloc,
     );
   });
 
@@ -57,7 +61,8 @@ void main() {
     test('Should emit [Loading, Loaded] when data is gotten successfully',
         () async {
       // arrange
-      when(mockGetEventsForDate(any)).thenAnswer((_) async => Right(tEventsForDay));
+      when(mockGetEventsForDate(any))
+          .thenAnswer((_) async => Right(tEventsForDay));
 
       // assert later
       final expected = [
