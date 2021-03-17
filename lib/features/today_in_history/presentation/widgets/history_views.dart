@@ -9,9 +9,10 @@ class HistoryListView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocProvider<TodayInHistoryBloc>(
-      create: (context) => serviceLocator<TodayInHistoryBloc>(),
+      create: (context) => serviceLocator<TodayInHistoryBloc>()..add(GetTIHForToday()),
       child: BlocBuilder<TodayInHistoryBloc, TodayInHistoryState>(
         builder: (context, state) {
+          print(state);
           if (state is Loaded) {
             return Expanded(
               child: ListView.builder(
@@ -26,7 +27,7 @@ class HistoryListView extends StatelessWidget {
               ),
             );
           }
-          if (state is Error)
+          if (state is Error) {
             return Expanded(
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -59,6 +60,7 @@ class HistoryListView extends StatelessWidget {
                 ],
               ),
             );
+          }
           return Expanded(
             child: LottieBuilder.asset(
               'assets/animations/lottie/loading-screen-loader-spinning-circle.json',
