@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:today_in_history/features/today_in_history/domain/entities/today_events.dart';
 import 'package:today_in_history/features/today_in_history/presentation/bloc/today_in_history_bloc.dart';
+import 'package:today_in_history/features/today_in_history/presentation/views/web_view.dart';
 import 'package:today_in_history/injection_container.dart';
 import 'package:lottie/lottie.dart';
 
@@ -9,10 +10,10 @@ class HistoryListView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocProvider<TodayInHistoryBloc>(
-      create: (context) => serviceLocator<TodayInHistoryBloc>()..add(GetTIHForToday()),
+      create: (context) =>
+          serviceLocator<TodayInHistoryBloc>()..add(GetTIHForToday()),
       child: BlocBuilder<TodayInHistoryBloc, TodayInHistoryState>(
         builder: (context, state) {
-          print(state);
           if (state is Loaded) {
             return Expanded(
               child: ListView.builder(
@@ -21,7 +22,29 @@ class HistoryListView extends StatelessWidget {
                   Event event = state.eventsModel.events[index];
                   return Padding(
                     padding: const EdgeInsets.all(8.0),
-                    child: Text(event.text),
+                    child: ListTile(
+                      title: InkWell(
+                          onTap: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) =>
+                                        WebViewPage(url: event.link)));
+                          },
+                          child:
+                              Text(event.text, textAlign: TextAlign.justify)),
+                      subtitle: Padding(
+                        padding: const EdgeInsets.only(top: 10),
+                        child: Text(
+                          event.year,
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 14,
+                          ),
+                        ),
+                      ),
+                      trailing: Icon(Icons.link),
+                    ),
                   );
                 },
               ),
