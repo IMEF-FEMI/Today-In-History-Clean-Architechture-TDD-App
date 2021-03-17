@@ -24,11 +24,8 @@ dependencies:
   webview_flutter: ^2.0.2
 
 dev_dependencies:
-  flutter_driver:    # new
-    sdk: flutter  
   flutter_test:
     sdk: flutter
-  test: ^1.14.4      # new
   mockito: ^5.0.1
 
 flutter:

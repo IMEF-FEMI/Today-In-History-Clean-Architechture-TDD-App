@@ -1,0 +1,21 @@
+-------------------- Auto-Git Log --------------------
+		Wed Mar 17 2021 18:05:01 GMT+0100 (West Africa Standard Time)
+------------------------------------------------------
+
+Modified files:
+* lib/features/today_in_history/presentation/views/today_in_history_screen.dart
+* lib/features/today_in_history/presentation/widgets/history_views.dart
+* pubspec.yaml
+
+
+Created files:
+* .autogit/logs/log-17-2-2021-15-44-21.txt
+* test_driver/app.dart
+* test_driver/app_test.dart
+
+
+Deleted files:
+
+
+Renamed files:
+* [object Object]
