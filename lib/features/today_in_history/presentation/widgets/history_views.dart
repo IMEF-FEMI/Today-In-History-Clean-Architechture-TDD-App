@@ -95,12 +95,6 @@ class HistoryListView extends StatelessWidget {
       ),
     );
 
-    // return Expanded(
-    //   child: LottieBuilder.asset(
-    //     'assets/animations/lottie/loading-screen-loader-spinning-circle.json',
-    //     width: MediaQuery.of(context).size.width * 0.35,
-    //     repeat: true,
-    //   ),
-    // );
+    
   }
 }
