@@ -35,7 +35,7 @@ class TodayInHistoryBloc
     getEventsForDate = date;
     getEventsForToday = today;
     dateSelectorBloc = dateBloc;
-   
+
     dateSelectorSubscription = dateBloc.listen((dateSelectorState) {
       print("---------------");
       print("-----------");
@@ -71,6 +71,10 @@ class TodayInHistoryBloc
       yield Loading();
       final failureOrEvent = await getEventsForToday(NoParams());
       yield* _eitherLoadedOrErrorState(failureOrEvent);
+    } else if (event is Retry) {
+      add(GetTIHForSpecificDay(
+          day: dateSelectorBloc.state.selectedDate.day,
+          month: dateSelectorBloc.state.selectedDate.month));
     }
   }
 

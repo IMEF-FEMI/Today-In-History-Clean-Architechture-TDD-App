@@ -20,3 +20,7 @@ class GetTIHForToday extends TodayInHistoryEvent {
   @override
   List<Object> get props => ['GetTIHForToday'];
 }
+class Retry extends TodayInHistoryEvent {
+  @override
+  List<Object> get props => ['Retry'];
+}

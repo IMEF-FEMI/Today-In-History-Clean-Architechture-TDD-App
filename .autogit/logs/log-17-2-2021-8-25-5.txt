@@ -1,0 +1,18 @@
+-------------------- Auto-Git Log --------------------
+		Wed Mar 17 2021 08:25:05 GMT+0100 (West Africa Standard Time)
+------------------------------------------------------
+
+Modified files:
+* lib/features/today_in_history/data/datasources/tih_remote_data_source.dart
+* lib/features/today_in_history/presentation/widgets/history_views.dart
+
+
+Created files:
+* .autogit/logs/log-17-2-2021-7-55-14.txt
+* assets/animations/lottie/error.json
+
+
+Deleted files:
+
+
+Renamed files:

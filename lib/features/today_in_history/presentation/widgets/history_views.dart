@@ -26,24 +26,39 @@ class HistoryListView extends StatelessWidget {
               ),
             );
           }
-
-          if (state is Error) {
+          if (state is Error)
             return Expanded(
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   Text(state.message),
+                  SizedBox(height: 10),
                   LottieBuilder.asset(
                     'assets/animations/lottie/error.json',
-                    width: MediaQuery.of(context).size.width * 0.35,
+                    // width: MediaQuery.of(context).size.width * 0.35,
                     repeat: true,
                   ),
-                  ElevatedButton(onPressed: () {}, child: Text("Try Again")),
+                  SizedBox(height: 10),
+                  ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        primary: Color(0xff3c3395),
+                        // minimumSize: Size(
+                        //   MediaQuery.of(context).size.width * .3,
+                        //   MediaQuery.of(context).size.height * .06,
+                        // ),
+                        shape: new RoundedRectangleBorder(
+                          borderRadius: new BorderRadius.circular(15.0),
+                        ),
+                      ),
+                      onPressed: () async {
+                        BlocProvider.of<TodayInHistoryBloc>(context)
+                            .add(Retry());
+                      },
+                      child: Text("Try again")),
                 ],
               ),
             );
-          }
           return Expanded(
             child: LottieBuilder.asset(
               'assets/animations/lottie/loading-screen-loader-spinning-circle.json',
