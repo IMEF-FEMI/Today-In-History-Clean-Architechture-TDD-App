@@ -26,7 +26,11 @@ class _DateCardsState extends State<DateCards> {
       today.add(Duration(days: 2)),
       today.add(Duration(days: 3)),
     ];
+    try {
     dateSelectorBloc = BlocProvider.of<DateSelectorBloc>(context);
+      
+    } catch (e) {
+    }
   }
 
   @override

@@ -36,7 +36,7 @@ class WebViewPageState extends State<WebViewPage> {
           Column(
             children: [
               LinearProgressIndicator(
-                value: progress.toDouble(),
+                value: progress.toDouble() / 100,
                 valueColor: AlwaysStoppedAnimation<Color>(
                   Theme.of(context).primaryColor,
                 ),
@@ -46,7 +46,6 @@ class WebViewPageState extends State<WebViewPage> {
                   onProgress: (value) {
                     setState(() {
                       progress = value;
-                      print(value);
                     });
                   },
                   onPageFinished: (_) {
