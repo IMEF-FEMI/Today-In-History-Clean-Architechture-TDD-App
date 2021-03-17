@@ -2,7 +2,7 @@
     package="com.imef.today_in_history">
    <application
         android:label="Today in Hostory"
-        android:icon="@mipmap/ic_launcher">
+        android:icon="@mipmap/launcher_icon">
         <activity
             android:name=".MainActivity"
             android:launchMode="singleTop"
