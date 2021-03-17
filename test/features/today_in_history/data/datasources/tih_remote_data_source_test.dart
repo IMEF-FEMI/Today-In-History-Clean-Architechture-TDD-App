@@ -46,7 +46,7 @@ void main() {
 
       verify(
         mockHttpClient.get(
-          Uri.parse('http://history.muffinlabs.com/date/$tMonth/$tDay'),
+          Uri.parse('https://history.muffinlabs.com/date/$tMonth/$tDay'),
           headers: {'Content-Type': 'application/json'},
         ),
       );
@@ -91,7 +91,7 @@ void main() {
 
       verify(
         mockHttpClient.get(
-          Uri.parse('http://history.muffinlabs.com/date'),
+          Uri.parse('https://history.muffinlabs.com/date'),
           headers: {'Content-Type': 'application/json'},
         ),
       );
