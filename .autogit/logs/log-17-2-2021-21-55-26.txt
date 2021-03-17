@@ -1,0 +1,65 @@
+-------------------- Auto-Git Log --------------------
+		Wed Mar 17 2021 21:55:26 GMT+0100 (West Africa Standard Time)
+------------------------------------------------------
+
+Modified files:
+* android/app/src/main/AndroidManifest.xml
+* android/app/src/main/res/drawable-v21/launch_background.xml
+* android/app/src/main/res/drawable/launch_background.xml
+* android/app/src/main/res/values/styles.xml
+* ios/Runner.xcodeproj/project.pbxproj
+* ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-1024x1024@1x.png
+* ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-20x20@1x.png
+* ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-20x20@2x.png
+* ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-20x20@3x.png
+* ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-29x29@1x.png
+* ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-29x29@2x.png
+* ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-29x29@3x.png
+* ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-40x40@1x.png
+* ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-40x40@2x.png
+* ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-40x40@3x.png
+* ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-60x60@2x.png
+* ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-60x60@3x.png
+* ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-76x76@1x.png
+* ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-76x76@2x.png
+* ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-83.5x83.5@2x.png
+* ios/Runner/Assets.xcassets/LaunchImage.imageset/Contents.json
+* ios/Runner/Assets.xcassets/LaunchImage.imageset/LaunchImage.png
+* ios/Runner/Assets.xcassets/LaunchImage.imageset/LaunchImage@2x.png
+* ios/Runner/Assets.xcassets/LaunchImage.imageset/LaunchImage@3x.png
+* ios/Runner/Base.lproj/LaunchScreen.storyboard
+* ios/Runner/Info.plist
+* pubspec.yaml
+* web/index.html
+
+
+Created files:
+* .autogit/logs/log-17-2-2021-21-25-19.txt
+* android/app/src/main/res/drawable-hdpi/splash.png
+* android/app/src/main/res/drawable-mdpi/splash.png
+* android/app/src/main/res/drawable-v21/background.png
+* android/app/src/main/res/drawable-xhdpi/splash.png
+* android/app/src/main/res/drawable-xxhdpi/splash.png
+* android/app/src/main/res/drawable-xxxhdpi/splash.png
+* android/app/src/main/res/drawable/background.png
+* android/app/src/main/res/mipmap-hdpi/launcher_icon.png
+* android/app/src/main/res/mipmap-mdpi/launcher_icon.png
+* android/app/src/main/res/mipmap-xhdpi/launcher_icon.png
+* android/app/src/main/res/mipmap-xxhdpi/launcher_icon.png
+* android/app/src/main/res/mipmap-xxxhdpi/launcher_icon.png
+* ios/Runner/Assets.xcassets/LaunchBackground.imageset/Contents.json
+* ios/Runner/Assets.xcassets/LaunchBackground.imageset/background.png
+* pubspec.lock
+* web/splash/img/dark-1x.png
+* web/splash/img/dark-2x.png
+* web/splash/img/dark-3x.png
+* web/splash/img/light-1x.png
+* web/splash/img/light-2x.png
+* web/splash/img/light-3x.png
+* web/splash/style.css
+
+
+Deleted files:
+
+
+Renamed files:
