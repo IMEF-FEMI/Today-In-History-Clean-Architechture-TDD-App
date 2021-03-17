@@ -34,7 +34,7 @@ class _TodayInHistoryViewState extends State<TodayInHistoryView> {
 
   @override
   Widget build(BuildContext context) {
-    return BlocProvider<TodayInHistoryBloc>(
+    return BlocProvider(
       create: (context) => serviceLocator<TodayInHistoryBloc>(),
       child: BlocBuilder<TodayInHistoryBloc, TodayInHistoryState>(
         builder: (context, state) {

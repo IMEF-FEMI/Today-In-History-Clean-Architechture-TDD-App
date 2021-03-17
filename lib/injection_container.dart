@@ -29,27 +29,20 @@ Future<void> init() async {
   serviceLocator.registerFactory(
     () => DateSelectorBloc(),
   );
-  // use cases
-  serviceLocator.registerLazySingleton(
-    () => GetEventsForDate(
-      repository: serviceLocator(),
-    ),
-  );
+ 
 
-  serviceLocator.registerLazySingleton(
-    () => GetEventsForToday(
-      repository: serviceLocator(),
-    ),
-  );
+ 
 
-  // repository
-  serviceLocator.registerLazySingleton<TodayInHistoryRepository>(
-    () => TodayInHistoryRepositoryImpl(
-      localDataSource: serviceLocator(),
-      remoteDataSource: serviceLocator(),
-      networkInfo: serviceLocator(),
-    ),
+  //! Core
+
+  serviceLocator.registerLazySingleton<NetworkInfo>(
+    () => NetworkInfoImpl(serviceLocator()),
   );
+  //! External
+  final sharedPreferences = await SharedPreferences.getInstance();
+  serviceLocator.registerLazySingleton(() => sharedPreferences);
+  serviceLocator.registerLazySingleton(() => http.Client());
+  serviceLocator.registerLazySingleton(() => DataConnectionChecker());
 
   // Data sources
   serviceLocator.registerLazySingleton<TIHLocalDataSource>(
@@ -64,14 +57,24 @@ Future<void> init() async {
     ),
   );
 
-  //! Core
-
-  serviceLocator.registerLazySingleton<NetworkInfo>(
-    () => NetworkInfoImpl(serviceLocator()),
+   // repository
+  serviceLocator.registerLazySingleton<TodayInHistoryRepository>(
+    () => TodayInHistoryRepositoryImpl(
+      localDataSource: serviceLocator(),
+      remoteDataSource: serviceLocator(),
+      networkInfo: serviceLocator(),
+    ),
   );
-  //! External
-  final sharedPreferences = await SharedPreferences.getInstance();
-  serviceLocator.registerLazySingleton(() => sharedPreferences);
-  serviceLocator.registerLazySingleton(() => http.Client());
-  serviceLocator.registerLazySingleton(() => DataConnectionChecker());
+   // use cases
+  serviceLocator.registerLazySingleton(
+    () => GetEventsForDate(
+      repository: serviceLocator(),
+    ),
+  );
+
+  serviceLocator.registerLazySingleton(
+    () => GetEventsForToday(
+      repository: serviceLocator(),
+    ),
+  );
 }
