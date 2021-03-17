@@ -21,4 +21,11 @@ class DateSelectorBloc extends Bloc<DateSelectorEvent, DateSelectorState> {
       yield DateSelectorState(selectedDate: event.selectedDate);
     }
   }
+
+
+  @override
+  Future<void> close() {
+    return super.close();
+  }
+
 }

@@ -26,11 +26,7 @@ class _DateCardsState extends State<DateCards> {
       today.add(Duration(days: 2)),
       today.add(Duration(days: 3)),
     ];
-    try {
     dateSelectorBloc = BlocProvider.of<DateSelectorBloc>(context);
-      
-    } catch (e) {
-    }
   }
 
   @override
@@ -49,6 +45,7 @@ class _DateCardsState extends State<DateCards> {
         child: ListView.builder(
           itemCount: selectableDates.length,
           scrollDirection: Axis.horizontal,
+          key: Key("date_card_listview"),
           itemBuilder: (context, index) {
             return Padding(
               padding: const EdgeInsets.symmetric(horizontal: 5.0),
@@ -64,6 +61,7 @@ class _DateCardsState extends State<DateCards> {
                 child: Container(
                   height: MediaQuery.of(context).size.height * .1,
                   width: MediaQuery.of(context).size.width * .15,
+                  key: Key("date_card_item_$index"),
                   decoration: BoxDecoration(
                       border: Border.all(
                         color: Colors.grey.withOpacity(.2),
