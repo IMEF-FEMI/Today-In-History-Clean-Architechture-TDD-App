@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:intl/intl.dart';
+import 'package:today_in_history/features/today_in_history/presentation/bloc/today_in_history_bloc.dart';
 import 'package:today_in_history/features/today_in_history/presentation/date_selector_bloc/date_selector_bloc.dart';
 import 'package:today_in_history/features/today_in_history/presentation/widgets/date_cards.dart';
 import 'package:today_in_history/features/today_in_history/presentation/widgets/date_info_view.dart';
@@ -33,29 +34,36 @@ class _TodayInHistoryViewState extends State<TodayInHistoryView> {
 
   @override
   Widget build(BuildContext context) {
-    return BlocProvider(
-      create: (context) => serviceLocator<DateSelectorBloc>(),
-      child: BlocBuilder<DateSelectorBloc, DateSelectorState>(
+    return BlocProvider<TodayInHistoryBloc>(
+      create: (context) => serviceLocator<TodayInHistoryBloc>(),
+      child: BlocBuilder<TodayInHistoryBloc, TodayInHistoryState>(
         builder: (context, state) {
-          return SafeArea(
-            child: Scaffold(
-              appBar: AppBar(
-                title: Text("Today in History"),
-                centerTitle: true,
-                backgroundColor: Color(0xff3c3395),
-              ),
-              body: Column(
-                mainAxisAlignment: MainAxisAlignment.start,
-                children: [
-                  SizedBox(height: 10),
-                  DateCards(),
-                  SizedBox(height: 50),
-                  DateInfoView(),
-                  SizedBox(height: 20),
-                  Divider(),
-                  HistoryListView(),
-                ],
-              ),
+          return BlocProvider(
+            create: (context) => serviceLocator<DateSelectorBloc>(),
+            child: BlocBuilder<DateSelectorBloc, DateSelectorState>(
+              builder: (context, state) {
+                return SafeArea(
+                  child: Scaffold(
+                    appBar: AppBar(
+                      title: Text("Today in History"),
+                      centerTitle: true,
+                      backgroundColor: Color(0xff3c3395),
+                    ),
+                    body: Column(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: [
+                        SizedBox(height: 10),
+                        DateCards(),
+                        SizedBox(height: 50),
+                        DateInfoView(),
+                        SizedBox(height: 20),
+                        Divider(),
+                        HistoryListView(),
+                      ],
+                    ),
+                  ),
+                );
+              },
             ),
           );
         },

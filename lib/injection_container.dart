@@ -26,7 +26,7 @@ Future<void> init() async {
     ),
   );
 
-  serviceLocator.registerLazySingleton(
+  serviceLocator.registerFactory(
     () => DateSelectorBloc(),
   );
   // use cases
