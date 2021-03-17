@@ -18,54 +18,20 @@ final serviceLocator = GetIt.instance;
 Future<void> init() async {
   //! Features - Number Trivia
   // Bloc
+  DateSelectorBloc dateSelectorBloc = DateSelectorBloc();
+
   serviceLocator.registerFactory(
     () => TodayInHistoryBloc(
       date: serviceLocator(),
       today: serviceLocator(),
-      dateBloc: serviceLocator(),
+      dateBloc: dateSelectorBloc,
     ),
   );
 
   serviceLocator.registerFactory(
-    () => DateSelectorBloc(),
+    () => dateSelectorBloc,
   );
- 
-
- 
-
-  //! Core
-
-  serviceLocator.registerLazySingleton<NetworkInfo>(
-    () => NetworkInfoImpl(serviceLocator()),
-  );
-  //! External
-  final sharedPreferences = await SharedPreferences.getInstance();
-  serviceLocator.registerLazySingleton(() => sharedPreferences);
-  serviceLocator.registerLazySingleton(() => http.Client());
-  serviceLocator.registerLazySingleton(() => DataConnectionChecker());
-
-  // Data sources
-  serviceLocator.registerLazySingleton<TIHLocalDataSource>(
-    () => TIHLocalDataSourceImpl(
-      sharedPreferences: serviceLocator(),
-    ),
-  );
-
-  serviceLocator.registerLazySingleton<TIHRemoteDataSource>(
-    () => TIHRemoteDataSourceImpl(
-      client: serviceLocator(),
-    ),
-  );
-
-   // repository
-  serviceLocator.registerLazySingleton<TodayInHistoryRepository>(
-    () => TodayInHistoryRepositoryImpl(
-      localDataSource: serviceLocator(),
-      remoteDataSource: serviceLocator(),
-      networkInfo: serviceLocator(),
-    ),
-  );
-   // use cases
+  // use cases
   serviceLocator.registerLazySingleton(
     () => GetEventsForDate(
       repository: serviceLocator(),
@@ -77,4 +43,37 @@ Future<void> init() async {
       repository: serviceLocator(),
     ),
   );
+
+  // repository
+  serviceLocator.registerLazySingleton<TodayInHistoryRepository>(
+    () => TodayInHistoryRepositoryImpl(
+      localDataSource: serviceLocator(),
+      remoteDataSource: serviceLocator(),
+      networkInfo: serviceLocator(),
+    ),
+  );
+
+  // Data sources
+  serviceLocator.registerLazySingleton<TIHLocalDataSource>(
+    () => TIHLocalDataSourceImpl(
+      sharedPreferences: serviceLocator<SharedPreferences>(),
+    ),
+  );
+
+  serviceLocator.registerLazySingleton<TIHRemoteDataSource>(
+    () => TIHRemoteDataSourceImpl(
+      client: serviceLocator(),
+    ),
+  );
+
+  //! Core
+
+  serviceLocator.registerLazySingleton<NetworkInfo>(
+    () => NetworkInfoImpl(serviceLocator()),
+  );
+  //! External
+  final sharedPreferences = await SharedPreferences.getInstance();
+  serviceLocator.registerLazySingleton(() => sharedPreferences);
+  serviceLocator.registerLazySingleton(() => http.Client());
+  serviceLocator.registerLazySingleton(() => DataConnectionChecker());
 }

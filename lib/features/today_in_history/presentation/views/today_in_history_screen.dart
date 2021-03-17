@@ -35,35 +35,28 @@ class _TodayInHistoryViewState extends State<TodayInHistoryView> {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (context) => serviceLocator<TodayInHistoryBloc>(),
-      child: BlocBuilder<TodayInHistoryBloc, TodayInHistoryState>(
+      create: (context) => serviceLocator<DateSelectorBloc>(),
+      child: BlocBuilder<DateSelectorBloc, DateSelectorState>(
         builder: (context, state) {
-          return BlocProvider(
-            create: (context) => serviceLocator<DateSelectorBloc>(),
-            child: BlocBuilder<DateSelectorBloc, DateSelectorState>(
-              builder: (context, state) {
-                return SafeArea(
-                  child: Scaffold(
-                    appBar: AppBar(
-                      title: Text("Today in History"),
-                      centerTitle: true,
-                      backgroundColor: Color(0xff3c3395),
-                    ),
-                    body: Column(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      children: [
-                        SizedBox(height: 10),
-                        DateCards(),
-                        SizedBox(height: 50),
-                        DateInfoView(),
-                        SizedBox(height: 20),
-                        Divider(),
-                        HistoryListView(),
-                      ],
-                    ),
-                  ),
-                );
-              },
+          return SafeArea(
+            child: Scaffold(
+              appBar: AppBar(
+                title: Text("Today in History"),
+                centerTitle: true,
+                backgroundColor: Color(0xff3c3395),
+              ),
+              body: Column(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  SizedBox(height: 10),
+                  DateCards(),
+                  SizedBox(height: 50),
+                  DateInfoView(),
+                  SizedBox(height: 20),
+                  Divider(),
+                  HistoryListView(),
+                ],
+              ),
             ),
           );
         },
