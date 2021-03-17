@@ -15,11 +15,11 @@ class TIHRemoteDataSourceImpl extends TIHRemoteDataSource {
   @override
   Future<TodayEvents> getEventsForDate(int month, int day) =>
       _getTodayInHistoryFromUrl(
-          'http://history.muffinlabs.com/date/$month/$day');
+          'https://history.muffinlabs.com/date/$month/$day');
 
   @override
   Future<TodayEvents> getEventsForToday() =>
-      _getTodayInHistoryFromUrl('http://history.muffinlabs.com/date');
+      _getTodayInHistoryFromUrl('https://history.muffinlabs.com/date');
 
   Future<TodayEvents> _getTodayInHistoryFromUrl(String url) async {
     final response = await client.get(
