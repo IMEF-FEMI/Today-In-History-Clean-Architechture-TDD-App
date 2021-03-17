@@ -18,18 +18,16 @@ final serviceLocator = GetIt.instance;
 Future<void> init() async {
   //! Features - Number Trivia
   // Bloc
-  DateSelectorBloc dateSelectorBloc = DateSelectorBloc();
-
-  serviceLocator.registerFactory(
+  serviceLocator.registerFactory<TodayInHistoryBloc>(
     () => TodayInHistoryBloc(
       date: serviceLocator(),
       today: serviceLocator(),
-      dateBloc: dateSelectorBloc,
+      dateBloc: serviceLocator(),
     ),
   );
 
-  serviceLocator.registerFactory(
-    () => dateSelectorBloc,
+  serviceLocator.registerLazySingleton(
+    () => DateSelectorBloc(),
   );
   // use cases
   serviceLocator.registerLazySingleton(
@@ -56,7 +54,7 @@ Future<void> init() async {
   // Data sources
   serviceLocator.registerLazySingleton<TIHLocalDataSource>(
     () => TIHLocalDataSourceImpl(
-      sharedPreferences: serviceLocator<SharedPreferences>(),
+      sharedPreferences: serviceLocator(),
     ),
   );
 

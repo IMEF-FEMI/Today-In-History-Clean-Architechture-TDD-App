@@ -24,17 +24,18 @@ class TodayInHistoryBloc
   DateSelectorBloc dateSelectorBloc;
   StreamSubscription dateSelectorSubscription;
 
-  TodayInHistoryBloc(
-      {@required GetEventsForDate date,
-      @required GetEventsForToday today,
-      @required DateSelectorBloc dateBloc})
-      : super(Empty()) {
+  TodayInHistoryBloc({
+    @required GetEventsForDate date,
+    @required GetEventsForToday today,
+    @required DateSelectorBloc dateBloc,
+  }) : super(Empty()) {
     assert(date != null);
     assert(today != null);
     assert(dateBloc != null);
     getEventsForDate = date;
     getEventsForToday = today;
     dateSelectorBloc = dateBloc;
+   
     dateSelectorSubscription = dateBloc.listen((dateSelectorState) {
       print("---------------");
       print("-----------");
@@ -46,7 +47,6 @@ class TodayInHistoryBloc
           day: dateSelectorState.selectedDate.day,
           month: dateSelectorState.selectedDate.month));
     });
-    
   }
 
   @override
@@ -54,6 +54,7 @@ class TodayInHistoryBloc
     dateSelectorSubscription.cancel();
     return super.close();
   }
+
   @override
   Stream<TodayInHistoryState> mapEventToState(
     TodayInHistoryEvent event,
