@@ -1,16 +1,28 @@
-# today_in_history
+# 🔥🔥 Today In History Flutter  App  [![Twitter Follow](https://img.shields.io/twitter/follow/dev_femi.svg?style=social)](https://twitter.com/dev_femi)
+Today In History
 
-A new Flutter project.
+<a href="https://play.google.com/store/apps/details?id=com.imef.today_in_history"><img src="https://playerzon.com/asset/download.png" width="200"></img></a>
+## ✨ Libraries & Techs used
+* Flutter bloc (state management)
+* Clean  Architecture 
+* Shared Preferences
+* get_it (dependency injection)
+* data_connection_checker
+* http
+* mockito
+* TDD
 
-## Getting Started
 
-This project is a starting point for a Flutter application.
+Star⭐ the repo if you like what you see😉.
 
-A few resources to get you started if this is your first Flutter project:
+## 📸 ScreenShots
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+<img src="ss/1.jpg" width="300"/> <img src="ss/2.jpg" width="300"/> <img src="ss/3.jpg" width="300"/> <img src="ss/4.jpg" width="300"/> 
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+
+
+## 🤓 Author(s)
+**Femi Bolaji** [![Twitter Follow](https://img.shields.io/twitter/follow/dev_femi.svg?style=social)](https://twitter.com/dev_femi)
+
+
+

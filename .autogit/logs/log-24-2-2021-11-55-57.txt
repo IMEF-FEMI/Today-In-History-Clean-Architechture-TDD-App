@@ -1,0 +1,17 @@
+-------------------- Auto-Git Log --------------------
+		Wed Mar 24 2021 11:55:57 GMT+0100 (West Africa Standard Time)
+------------------------------------------------------
+
+Modified files:
+* android/app/build.gradle
+* android/app/src/main/AndroidManifest.xml
+
+
+Created files:
+* .autogit/logs/log-17-2-2021-22-55-42.txt
+
+
+Deleted files:
+
+
+Renamed files:
